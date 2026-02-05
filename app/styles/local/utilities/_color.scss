@@ -1,0 +1,15 @@
+.text-highlight {
+  color: var(--text-highlight);
+
+  &.on-dark {
+    color: var(--text-highlight-on-dark);
+  }
+}
+
+.text-muted {
+  color: var(--text-muted);
+
+  &.on-dark {
+    color: var(--text-muted-on-dark);
+  }
+}

@@ -1,0 +1,107 @@
+//:root {
+//  --heading-margin-bottom: 0.5em;
+//}
+
+  .type-body-20 {
+    font-family: var(--font-body), sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    font-weight: var(--font-body-weight);
+    letter-spacing: 0.013em;
+  }
+
+  .type-body-16 {
+    font-family: var(--font-body), sans-serif;
+    font-size: 1rem;
+    line-height: 1.6em;
+    font-weight: var(--font-body-weight);
+    letter-spacing: 0;
+  }
+
+  .type-body-14 {
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4em;
+    font-weight: var(--font-body-weight);
+    letter-spacing: 0.016em;
+  }
+
+  .type-body-12 {
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5em;
+    font-weight: var(--font-body-weight);
+    letter-spacing: 0.023em;
+  }
+
+  .type-heading-48 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 3rem;
+    line-height: 1.17em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: -0.06em;
+    //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  .type-heading-32 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 2rem;
+    line-height: 1.25em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: 0;
+    //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  .type-heading-24 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.35em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: 0;
+    //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  .type-heading-20 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: 0.013em;
+    //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  .type-heading-16 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: 0.02em;
+    //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  .type-heading-14 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.7em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: 0.02em;
+    //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  .type-heading-12 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.65em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: 0.02em;
+    //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  .type-display-64 {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 4rem;
+    line-height: 1.08em;
+    font-weight: var(--font-heading-weight);
+    letter-spacing: -0.04em;
+    //margin-bottom: var(--heading-margin-bottom);
+  }

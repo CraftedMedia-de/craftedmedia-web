@@ -1,0 +1,49 @@
+body {
+  background-color: var(--page-background);
+  color: var(--text-body);
+  font-family: var(--font-body), sans-serif;
+}
+
+section:not(:last-child) {
+    margin-bottom: 16rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Figtree, sans-serif;
+  font-weight: 700;
+  color: var(--text-heading);
+
+  &:not(.no-dot)::after {
+    content: ".";
+    display: inline-block;
+    margin-left: 0.05em;
+    font-weight: inherit;
+    line-height: 1;
+    pointer-events: none;
+    color: var(--brand-dot)
+  }
+}
+
+.no-dot {
+  &::after {
+    content: "";
+    display: none !important;
+  }
+}
+
+.dot {
+    &::after {
+        content: ".";
+        display: inline-block;
+        margin-left: 0.05em;
+        font-weight: inherit;
+        line-height: 1;
+        pointer-events: none;
+        color: var(--brand-dot)
+    }
+}
+
+.shadow-s {
+  /* --shadow-s */
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.30) inset, 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}

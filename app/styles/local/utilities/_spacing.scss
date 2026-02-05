@@ -1,0 +1,26 @@
+// content/utilities/_spacing.scss
+@use "../../config/spacing" as *;
+
+@each $key, $val in $space {
+  .padding-#{$key}  { padding: $val; }
+  .paddingx-#{$key} { padding-inline: $val; }
+  .paddingy-#{$key} { padding-block: $val; }
+
+  .margin-#{$key}  { margin: $val; }
+  .marginx-#{$key} { margin-inline: $val; }
+  .marginy-#{$key} { margin-block: $val; }
+
+  .gap-#{$key} { gap: $val; }
+}
+
+@each $key, $val in $space {
+  .padding-top-#{$key} { padding-top: $val; }
+  .padding-right-#{$key} { padding-right: $val; }
+  .padding-botton-#{$key} { padding-bottom: $val; }
+  .padding-left-#{$key} { padding-left: $val; }
+
+  .margin-top-#{$key} { margin-top: $val; }
+  .margin-right-#{$key} { margin-right: $val; }
+  .margin-bottom-#{$key} { margin-bottom: $val; }
+  .margin-left-#{$key} { margin-left: $val; }
+}

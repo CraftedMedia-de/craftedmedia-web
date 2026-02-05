@@ -1,0 +1,42 @@
+/* Alignments (align-items) */
+$align-items: (
+        start: flex-start,
+        center: center,
+        end: flex-end,
+        stretch: stretch,
+        baseline: baseline
+);
+
+/* Justify (justify-content) */
+$justify-content: (
+        start: flex-start,
+        center: center,
+        end: flex-end,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly
+);
+
+/* Base (optional, falls du manchmal nur vflex/hflex brauchst) */
+.hflex { display: flex; flex-direction: row; }
+.vflex { display: flex; flex-direction: column; }
+
+/* Combo-Classes */
+@each $align-key, $align-value in $align-items {
+  @each $justify-key, $justify-value in $justify-content {
+
+    .hflex-#{$align-key}-#{$justify-key} {
+      display: flex;
+      flex-direction: row;
+      align-items: $align-value;
+      justify-content: $justify-value;
+    }
+
+    .vflex-#{$align-key}-#{$justify-key} {
+      display: flex;
+      flex-direction: column;
+      align-items: $align-value;
+      justify-content: $justify-value;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+// styles/content/utilities/_icons.scss
+@use "../../config/spacing" as *;
+
+/**
+ * ICON BASE
+ * - .icon ist ein Wrapper, der das SVG sauber ausrichtet (keine Baseline-Gaps).
+ * - Das SVG ist standardmäßig 1em groß, d. h. die Icon-Größe steuerst du über font-size am Wrapper.
+ */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.icon > svg {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+/**
+ * ICON SIZES
+ * - .icon-16, .icon-24, ...
+ * - Nutzt spacing.$spacing als Quelle der Wahrheit.
+ */
+@each $size-key, $size-value in $space {
+  .icon-#{$size-key} {
+    font-size: $size-value;
+  }
+}
+
+/**
+ * ICON + TEXT PATTERN
+ * - .icon-text ist ein Wrapper für "Icon + Label"
+ * - gap wird über .icon-gap-8, .icon-gap-12, ... gesteuert
+ */
+.icon-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+@each $gap-key, $gap-value in $space {
+  .icon-gap-#{$gap-key} {
+    gap: $gap-value;
+  }
+}
+
+/**
+ * ICON BUTTON SIZES (Hit Area)
+ * - .icon-btn-40 => 40x40 Klickfläche
+ * - Du kombinierst das meist mit .icon icon-20 inside
+ */
+@each $btn-key, $btn-value in $space {
+  .icon-btn-#{$btn-key} {
+    width: $btn-value;
+    height: $btn-value;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 0;
+  }
+}

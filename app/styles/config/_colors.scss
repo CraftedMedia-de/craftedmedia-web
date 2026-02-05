@@ -1,0 +1,58 @@
+:root {
+  // Primitive color definitions
+  --pink-500: #FE0048;
+
+  --gray-0: #FFFFFF;
+  --gray-50: #F2F2F2;
+  --gray-300: #9C9C9C;
+  --gray-600: #525252;
+  --gray-900: #0D0D0D;
+
+
+  // Alias color definitions
+  --brand-500: var(--pink-500);
+
+  --neutral-0: var(--gray-0);
+  --neutral-50: var(--gray-50);
+  --neutral-300: var(--gray-300);
+  --neutral-600: var(--gray-600);
+  --neutral-900: var(--gray-900);
+
+  // Mapped color definitions
+
+    // Page colors
+  --page-background: var(--neutral-50);
+
+    // Text colors
+  --text-heading: var(--neutral-900);
+  --text-heading-on-dark: var(--neutral-0);
+  --text-heading-on-brand: var(--neutral-0);
+
+  --text-body: var(--neutral-600);
+  --text-body-on-dark: var(--neutral-300);
+  --text-body-on-brand: var(--neutral-0);
+
+  --text-highlight: var(--neutral-900);
+  --text-highlight-on-dark: var(--neutral-0);
+
+  --text-muted: var(--neutral-600);
+  --text-muted-on-dark: var(--neutral-300);
+
+    // Card colors
+  --card-background: var(--neutral-0);
+  --card-text-body: var(--neutral-600);
+  --card-text-heading: var(--neutral-900);
+  --card-dark-background: var(--neutral-900);
+  --card-dark-text-body: var(--neutral-300);
+  --card-dark-text-heading: var(--neutral-0);
+
+    // Branding colors
+  --brand-dot: var(--brand-500);
+
+    // Button colors
+  --button-dark-background: var(--neutral-900);
+  --button-bright-background: var(--neutral-0);
+  --button-brand-background: var(--brand-500);
+
+}
+

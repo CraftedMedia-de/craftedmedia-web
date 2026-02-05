@@ -1,0 +1,37 @@
+// config/_layers.scss
+$layers: (
+        base: 0,
+        header: 100,
+        dropdown: 200,
+        overlay: 300,
+        modal: 400,
+        toast: 500,
+        tooltip: 600
+) !default;
+
+@function layer($name) {
+  @if map-has-key($layers, $name) {
+    @return map-get($layers, $name);
+  }
+  @error "Unknown layer '#{$name}'. Check _layers.scss.";
+}
+
+
+
+//Verwendung:
+
+//.header {
+//  position: sticky;
+//  top: 0;
+//  z-index: layer(header);
+//}
+//
+//.dropdown {
+//  position: absolute;
+//  z-index: layer(dropdown);
+//}
+//
+//.modal {
+//  position: fixed;
+//  z-index: layer(modal);
+//}

@@ -1,0 +1,26 @@
+$breakpoints: (
+        sm: 480px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1280px
+) !default;
+
+@function bp($key) {
+  @return map-get($breakpoints, $key);
+}
+
+@mixin down($key) {
+  @media (max-width: (bp($key) - 0.02px)) {
+    @content;
+  }
+}
+
+//Verwendung:
+//.layout {
+//  display: grid;
+//  grid-template-columns: 280px 1fr;
+//
+//  @include down(md) {
+//    grid-template-columns: 1fr;
+//  }
+//}
