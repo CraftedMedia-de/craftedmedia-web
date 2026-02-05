@@ -7,7 +7,7 @@
 		<div class="hero hflex-end-between gap-32">
 			<h1 class="type-display-64 text-highlight on-dark">Design und Entwicklung mit dem Nutzer im Fokus</h1>
 			<div class="vflex-start-start gap-32">
-				<p class="type-body-20">CraftedMedia gestaltet nutzerzentrierte Webseiten und Inhalte für Unternehmen, die wachsen – mit klarem Fokus auf Transparenz, hochwertigem Design und einem Nutzererlebnis, das den Menschen konsequent in den Mittelpunkt stellt.</p>
+				<p class="type-body-20"><strong>CraftedMedia</strong> gestaltet nutzerzentrierte Webseiten und Inhalte für Unternehmen, die wachsen – mit klarem Fokus auf Transparenz, hochwertigem Design und einem Nutzererlebnis, das den Menschen konsequent in den Mittelpunkt stellt.</p>
 				<div class="text-highlight on-dark type-heading-20">Für Unternehmen, die nachhaltig wachsen wollen.</div>
 				<div class="hflex-center-start gap-16">
 					<button>Mehr erfahren</button>

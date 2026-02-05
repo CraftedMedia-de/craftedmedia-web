@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import NotebookPen from '~/components/icon/NotebookPen.vue';
-import HeroMainPage from '~/components/HeroMainPage.vue';
+import HeroMainPage from '~/components/section/HeroMainPage.vue';
 
 
 </script>
 
 <template>
 	<HeroMainPage />
+
 
 	<div class="card-grid">
 		<Card
