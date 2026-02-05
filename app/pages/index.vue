@@ -2,6 +2,7 @@
 import NotebookPen from '~/components/icon/NotebookPen.vue';
 import HeroMainPage from '~/components/section/HeroMainPage.vue';
 import MediaBlock from '~/components/section/MediaBlock.vue';
+import Services from '~/components/section/Services.vue';
 </script>
 
 <template>
@@ -10,6 +11,10 @@ import MediaBlock from '~/components/section/MediaBlock.vue';
 	</section>
 	<section>
 		<MediaBlock />
+	</section>
+
+	<section>
+		<Services />
 	</section>
 
 	<div class="card-grid">
