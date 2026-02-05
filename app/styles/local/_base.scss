@@ -49,8 +49,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 strong {
-  color: var(--text-heading-on-dark);
+  color: var(--text-highlight);
   font-weight: inherit;
+
+  &.on-dark {
+    color: var(--text-highlight-on-dark);
+  }
 }
 
 button {
