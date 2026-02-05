@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import NotebookPen from '~/components/icon/NotebookPen.vue';
 import HeroMainPage from '~/components/section/HeroMainPage.vue';
-
-
+import MediaBlock from '~/components/section/MediaBlock.vue';
 </script>
 
 <template>
-	<HeroMainPage />
-
+	<section>
+		<HeroMainPage />
+	</section>
+	<section>
+		<MediaBlock />
+	</section>
 
 	<div class="card-grid">
 		<Card
@@ -26,14 +29,12 @@ import HeroMainPage from '~/components/section/HeroMainPage.vue';
 		<Card
 			number="04"
 			heading="Launch"
-			paragraph="Nach deiner Freigabe geht die Website live – bereit, deine Kunden zu begeistern.">
-		</Card>
+			paragraph="Nach deiner Freigabe geht die Website live – bereit, deine Kunden zu begeistern."></Card>
 
 		<Card
 			number="04"
 			heading="Launch"
-			paragraph="Nach deiner Freigabe geht die Website live – bereit, deine Kunden zu begeistern.">
-		</Card>
+			paragraph="Nach deiner Freigabe geht die Website live – bereit, deine Kunden zu begeistern."></Card>
 	</div>
 
 	<div class="card-grid">
@@ -41,48 +42,34 @@ import HeroMainPage from '~/components/section/HeroMainPage.vue';
 			number="02"
 			heading="Konzept & Design"
 			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website.">
-		</Card>
+			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
 
 		<Card
 			number="02"
 			heading="Konzept & Design"
 			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website.">
-
-
-		</Card>
+			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
 		<Card
 			number="02"
 			heading="Konzept & Design"
 			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website.">
-
-
-		</Card>
+			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
 		<Card
 			number="02"
 			heading="Konzept & Design"
 			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website.">
-
-
-		</Card>
+			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
 	</div>
 
-	<CustomerShowcase paragraph="CraftedMedia hat unsere Website neu gestaltet und wir könnten nicht zufriedener sein.">
-		<NotebookPen/>
+	<CustomerShowcase
+		paragraph="CraftedMedia hat unsere Website neu gestaltet und wir könnten nicht zufriedener sein.">
+		<NotebookPen />
 	</CustomerShowcase>
 
-
-
 	<button>Hallo</button>
-
-
 </template>
 
 <style scoped>
-
 .card-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
