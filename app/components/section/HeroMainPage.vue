@@ -48,17 +48,4 @@
 		max-width: 45ch;
 	}
 }
-
-button {
-	background-color: red;
-	padding-inline: 2rem;
-	padding-block: 1rem;
-	border-radius: 1rem;
-	color: white;
-	border: none;
-
-	&:hover {
-		background-color: darkred;
-	}
-}
 </style>

@@ -52,3 +52,16 @@ strong {
   color: var(--text-heading-on-dark);
   font-weight: inherit;
 }
+
+button {
+  background-color: red;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 1rem;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: darkred;
+  }
+}
