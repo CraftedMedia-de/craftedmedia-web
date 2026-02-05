@@ -9,7 +9,7 @@
   "importOrderSortSpecifiers": true,
   "organizeImportsSkipDestructiveCodeActions": true,
   "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-organize-attributes"],
-  "printWidth": 120,
+  "printWidth": 75,
   "singleAttributePerLine": true,
   "singleQuote": true,
   "tabWidth": 4,
