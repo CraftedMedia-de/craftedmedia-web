@@ -3,6 +3,7 @@ import NotebookPen from '~/components/icon/NotebookPen.vue';
 import HeroMainPage from '~/components/section/HeroMainPage.vue';
 import MediaBlock from '~/components/section/MediaBlock.vue';
 import Services from '~/components/section/Services.vue';
+import Process from '~/components/section/Process.vue';
 </script>
 
 <template>
@@ -15,6 +16,10 @@ import Services from '~/components/section/Services.vue';
 
 	<section>
 		<Services />
+	</section>
+
+	<section>
+		<Process />
 	</section>
 
 	<div class="card-grid">
