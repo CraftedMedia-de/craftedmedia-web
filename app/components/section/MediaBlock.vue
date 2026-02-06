@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div class="grid-2-columns gap-128 align-items-center">
+	<div class="grid gap-128 align-items-center">
 		<div class="image"></div>
 
 		<div class="vflex-start-center gap-32">
@@ -42,5 +42,10 @@
 	//	rgba(254, 0, 72, 0) 50%,
 	//	rgba(254, 0, 72, 0.2) 100%
 	//);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 </style>
