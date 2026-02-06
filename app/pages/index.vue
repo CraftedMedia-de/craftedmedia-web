@@ -26,62 +26,6 @@ import CustomersAndPartners from '~/components/section/CustomersAndPartners.vue'
 	<section>
 		<CustomersAndPartners />
 	</section>
-
-	<div class="card-grid">
-		<Card
-			number="01"
-			heading="Planung"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website.">
-			<IconLandPlot />
-		</Card>
-		<Card
-			number="03"
-			heading="Entwicklung"
-			paragraph="Auf Basis des Designs setzen wir deine Website technisch um – modern, schnell und zuverlässig.">
-			<NotebookPen />
-		</Card>
-
-		<Card
-			number="04"
-			heading="Launch"
-			paragraph="Nach deiner Freigabe geht die Website live – bereit, deine Kunden zu begeistern."></Card>
-
-		<Card
-			number="04"
-			heading="Launch"
-			paragraph="Nach deiner Freigabe geht die Website live – bereit, deine Kunden zu begeistern."></Card>
-	</div>
-
-	<div class="card-grid">
-		<Card
-			number="02"
-			heading="Konzept & Design"
-			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
-
-		<Card
-			number="02"
-			heading="Konzept & Design"
-			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
-		<Card
-			number="02"
-			heading="Konzept & Design"
-			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
-		<Card
-			number="02"
-			heading="Konzept & Design"
-			variant="variant-2"
-			paragraph="Wir erstellen einen genauen Plan und gestalten das visuelle Design deiner Website."></Card>
-	</div>
-
-	<CustomerShowcase
-		paragraph="CraftedMedia hat unsere Website neu gestaltet und wir könnten nicht zufriedener sein.">
-		<NotebookPen />
-	</CustomerShowcase>
-
-	<button>Hallo</button>
 </template>
 
 <style scoped>
