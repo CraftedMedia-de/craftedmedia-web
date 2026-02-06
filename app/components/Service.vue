@@ -14,7 +14,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<div class="grid-2-columns gap-32">
+	<div class="grid grid-autoFit-300">
 		<div class="rail vflex-start-start gap-16">
 			<h2 class="type-heading-48">{{ props.service }}</h2>
 			<p
@@ -24,7 +24,7 @@ const props = defineProps<{
 			</p>
 		</div>
 
-		<div class="grid gap-64">
+		<div class="grid-wrapper gap-64">
 			<video
 				class="video"
 				width="100%"
@@ -51,6 +51,11 @@ const props = defineProps<{
 </template>
 
 <style scoped>
+.grid {
+	gap: 2rem;
+	grid-row-gap: 4rem;
+}
+
 .rail {
 	position: sticky;
 	top: 8rem;
@@ -62,7 +67,7 @@ const props = defineProps<{
 	border-radius: 1.5rem;
 }
 
-.grid {
+.grid-wrapper {
 	display: grid;
 	grid-template-columns: 1fr;
 }
