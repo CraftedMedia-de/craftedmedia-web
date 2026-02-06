@@ -1,23 +1,28 @@
 <script setup lang="ts">
 interface Props {
-	heading: string
-	paragraph: string
-	number?: string
-	variant?: 'default' | 'variant-2'
+	heading: string;
+	paragraph: string;
+	number?: string;
+	variant?: 'default' | 'variant-2';
 }
 
 const props = withDefaults(defineProps<Props>(), {
 	heading: 'heading',
 	paragraph: 'paragraph',
-	number: '01',
-	variant: 'default'
-})
+	variant: 'default',
+});
 </script>
 
 <template>
-	<div v-if="props.variant === 'default'" class="card shadow-s">
+	<div
+		class="card shadow-s"
+		v-if="props.variant === 'default'">
 		<div>
-			<div v-if="props.number" class="type-heading-32 dot">{{ props.number }}</div>
+			<div
+				class="type-heading-32 dot"
+				v-if="props.number">
+				{{ props.number }}
+			</div>
 			<h3 class="type-heading-32 no-dot">{{ props.heading }}</h3>
 		</div>
 
@@ -29,7 +34,9 @@ const props = withDefaults(defineProps<Props>(), {
 		</div>
 	</div>
 
-	<div v-else-if="props.variant === 'variant-2'" class="card variant-2 shadow-s">
+	<div
+		class="card variant-2 shadow-s"
+		v-else-if="props.variant === 'variant-2'">
 		<IconBase class="icon-32">
 			<slot />
 		</IconBase>
