@@ -1,14 +1,10 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<NavBar />
-	<main>
+	<main class="content-grid">
 		<slot />
 	</main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -6,7 +6,7 @@ import Services from '~/components/section/Services.vue';
 </script>
 
 <template>
-	<section>
+	<section class="breakout">
 		<HeroMainPage />
 	</section>
 	<section>
