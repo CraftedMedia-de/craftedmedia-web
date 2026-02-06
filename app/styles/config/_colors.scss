@@ -6,6 +6,7 @@
   --gray-50: #F2F2F2;
   --gray-300: #9C9C9C;
   --gray-600: #525252;
+  --gray-750: #404040;
   --gray-900: #0D0D0D;
 
   --gray-900-10: rgba(13, 13, 13, 0.1);
@@ -27,6 +28,7 @@
   --neutral-50: var(--gray-50);
   --neutral-300: var(--gray-300);
   --neutral-600: var(--gray-600);
+  --neutral-750: var(--gray-750);
   --neutral-900: var(--gray-900);
 
   --neutral-900-transparent-10: var(--gray-900-10);
@@ -75,6 +77,10 @@
 
     // Button colors
   --button-dark-background: var(--neutral-900);
+  --button-dark-background-hover: var(--neutral-750);
+  --button-dark-text: var(--neutral-0);
+
+
   --button-bright-background: var(--neutral-0);
   --button-brand-background: var(--brand-500);
 
