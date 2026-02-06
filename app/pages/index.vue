@@ -4,6 +4,7 @@ import HeroMainPage from '~/components/section/HeroMainPage.vue';
 import MediaBlock from '~/components/section/MediaBlock.vue';
 import Services from '~/components/section/Services.vue';
 import Process from '~/components/section/Process.vue';
+import CustomersAndPartners from '~/components/section/CustomersAndPartners.vue';
 </script>
 
 <template>
@@ -20,6 +21,10 @@ import Process from '~/components/section/Process.vue';
 
 	<section>
 		<Process />
+	</section>
+
+	<section>
+		<CustomersAndPartners />
 	</section>
 
 	<div class="card-grid">
