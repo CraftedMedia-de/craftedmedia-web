@@ -43,6 +43,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+// Auswahl-Stile
+::selection {
+  background: var(--brand-500-transparent-20);
+}
+::-moz-selection {
+  background: var(--brand-500-transparent-20);
+}
+
 .shadow-s {
   box-shadow: var(--shadow-s);
 }
