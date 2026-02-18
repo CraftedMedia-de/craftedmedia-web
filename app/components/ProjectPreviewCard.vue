@@ -71,13 +71,22 @@ const props = defineProps<{
 			transform: translateY(0);
 		}
 	}
+
+	> h3 {
+		z-index: 3;
+		position: relative;
+	}
+
+	> .label-wrapper {
+		z-index: 3;
+		position: relative;
+	}
 }
 
 .card-image-wrapper {
 	position: absolute;
 	inset: 0;
 	border-radius: inherit;
-	z-index: -1;
 }
 
 .label-item {
