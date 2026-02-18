@@ -4,7 +4,7 @@ import MediaBlock from '~/components/section/MediaBlock.vue';
 import Services from '~/components/section/Services.vue';
 import Process from '~/components/section/Process.vue';
 import CustomersAndPartners from '~/components/section/CustomersAndPartners.vue';
-import ProjectPreviewCard from '~/components/section/ProjectPreviewCard.vue';
+import ProjectsOverview from '~/components/section/ProjectsOverview.vue';
 </script>
 
 <template>
@@ -23,16 +23,16 @@ import ProjectPreviewCard from '~/components/section/ProjectPreviewCard.vue';
 		<Services />
 	</section>
 
+	<section class="full-width">
+		<ProjectsOverview />
+	</section>
+
 	<section>
 		<Process />
 	</section>
 
 	<section>
 		<CustomersAndPartners />
-	</section>
-
-	<section>
-		<ProjectPreviewCard />
 	</section>
 </template>
 

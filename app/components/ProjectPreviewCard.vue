@@ -14,7 +14,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<div class="content-wrapper shadow-1">
+	<div class="content-wrapper shadow-l">
 		<h3 class="type-heading-24 text-highlight on-dark no-dot">
 			{{ props.projectCustomer }}
 		</h3>
