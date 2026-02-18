@@ -8,10 +8,14 @@ import CustomersAndPartners from '~/components/section/CustomersAndPartners.vue'
 
 <template>
 	<section class="breakout">
-		<HeroMainPage />
+		<HeroMainPage
+			image-src="/images/test.png"
+			image-alt="test" />
 	</section>
 	<section>
-		<MediaBlock />
+		<MediaBlock
+			image-src="/images/2-humans-on-table.png"
+			image-alt="test" />
 	</section>
 
 	<section>

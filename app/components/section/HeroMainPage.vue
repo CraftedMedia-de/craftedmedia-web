@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+	imageSrc: string;
+	imageAlt: string;
+}>();
+</script>
 
 <template>
 	<div class="padding-16">
@@ -23,21 +28,36 @@
 					<button>Projekt unverbindlich besprechen</button>
 				</div>
 			</div>
-			<div class="hero-image"></div>
+			<div class="hero-image overlay"></div>
+			<NuxtImg
+				class="hero-image"
+				:src="props.imageSrc"
+				:alt="props.imageAlt"></NuxtImg>
 		</div>
 	</div>
 </template>
 
 <style scoped>
 .hero-image {
-	background-color: var(--neutral-900);
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	z-index: -1;
+	z-index: -2;
 	border-radius: inherit;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+	&.overlay {
+		background: linear-gradient(
+			180deg,
+			rgba(13, 13, 13, 0) 0%,
+			#0d0d0d 100%
+		);
+		z-index: -1;
+	}
 }
 
 .hero {

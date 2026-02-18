@@ -1,6 +1,17 @@
+// scss
 :root {
   // Primitive color definitions
   --pink-500: #FE0048;
+
+  --pink-500-10: rgba(254, 0, 72, 0.1);
+  --pink-500-20: rgba(254, 0, 72, 0.2);
+  --pink-500-30: rgba(254, 0, 72, 0.3);
+  --pink-500-40: rgba(254, 0, 72, 0.4);
+  --pink-500-50: rgba(254, 0, 72, 0.5);
+  --pink-500-60: rgba(254, 0, 72, 0.6);
+  --pink-500-70: rgba(254, 0, 72, 0.7);
+  --pink-500-80: rgba(254, 0, 72, 0.8);
+  --pink-500-90: rgba(254, 0, 72, 0.9);
 
   --gray-0: #FFFFFF;
   --gray-50: #F2F2F2;
@@ -19,10 +30,18 @@
   --gray-900-80: rgba(13, 13, 13, 0.8);
   --gray-900-90: rgba(13, 13, 13, 0.9);
 
-
-
   // Alias color definitions
   --brand-500: var(--pink-500);
+
+  --brand-500-transparent-10: var(--pink-500-10);
+  --brand-500-transparent-20: var(--pink-500-20);
+  --brand-500-transparent-30: var(--pink-500-30);
+  --brand-500-transparent-40: var(--pink-500-40);
+  --brand-500-transparent-50: var(--pink-500-50);
+  --brand-500-transparent-60: var(--pink-500-60);
+  --brand-500-transparent-70: var(--pink-500-70);
+  --brand-500-transparent-80: var(--pink-500-80);
+  --brand-500-transparent-90: var(--pink-500-90);
 
   --neutral-0: var(--gray-0);
   --neutral-50: var(--gray-50);
@@ -41,15 +60,15 @@
   --neutral-900-transparent-80: var(--gray-900-80);
   --neutral-900-transparent-90: var(--gray-900-90);
 
-  // Mapped color definitions
+  /* Mapped color definitions */
 
-  // Accordion colors
+  /* Accordion colors */
   --Accordion-border: var(--neutral-900-transparent-20);
 
-    // Page colors
+  /* Page colors */
   --page-background: var(--neutral-50);
 
-    // Text colors
+  /* Text colors */
   --text-heading: var(--neutral-900);
   --text-heading-on-dark: var(--neutral-0);
   --text-heading-on-brand: var(--neutral-0);
@@ -64,7 +83,7 @@
   --text-muted: var(--neutral-600);
   --text-muted-on-dark: var(--neutral-300);
 
-    // Card colors
+  /* Card colors */
   --card-background: var(--neutral-0);
   --card-text-body: var(--neutral-600);
   --card-text-heading: var(--neutral-900);
@@ -72,19 +91,14 @@
   --card-dark-text-body: var(--neutral-300);
   --card-dark-text-heading: var(--neutral-0);
 
-    // Branding colors
+  /* Branding colors */
   --brand-dot: var(--brand-500);
 
-    // Button colors
+  /* Button colors */
   --button-dark-background: var(--neutral-900);
   --button-dark-background-hover: var(--neutral-750);
   --button-dark-text: var(--neutral-0);
 
-
   --button-bright-background: var(--neutral-0);
   --button-brand-background: var(--brand-500);
-
 }
-
-
-
