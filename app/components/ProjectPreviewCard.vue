@@ -5,6 +5,8 @@ import Wrench from '~/components/icon/Wrench.vue';
 
 const props = defineProps<{
 	projectCustomer: string;
+	projectImageSrc: string;
+	projectImageAlt: string;
 	labelGoal: string;
 	labelResult: string;
 	labelServices: string;
@@ -39,7 +41,8 @@ const props = defineProps<{
 			<div class="image-overlay-brand border-radius-inherit"></div>
 			<NuxtImg
 				class="image border-radius-inherit"
-				src="/images/test.png" />
+				:src="props.projectImageSrc"
+				:alt="props.projectImageAlt" />
 		</div>
 	</div>
 </template>
