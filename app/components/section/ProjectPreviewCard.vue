@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+	labelGoal: string;
+	labelResult: string;
+	labelServices: string;
+}>();
+</script>
 
 <template>
 	<div class="content-wrapper shadow-1">
@@ -6,9 +12,21 @@
 			Lüneburger Heide Immobilien
 		</h3>
 		<div class="label-wrapper vflex gap-8">
-			<div>Label</div>
-			<div>Label</div>
-			<div>Label</div>
+			<Label
+				class="label-item"
+				:label="props.labelGoal">
+				<IconLandPlot />
+			</Label>
+			<Label
+				class="label-item"
+				:label="props.labelResult">
+				<IconLandPlot />
+			</Label>
+			<Label
+				class="label-item"
+				:label="props.labelResult">
+				<IconLandPlot />
+			</Label>
 		</div>
 
 		<div class="card-image-wrapper">
@@ -40,8 +58,9 @@
 			opacity: 0;
 		}
 
-		.label-wrapper {
+		.label-item {
 			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }
@@ -53,9 +72,35 @@
 	z-index: -1;
 }
 
-.label-wrapper {
+.label-item {
 	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+	transform: translateY(0.5rem);
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+	will-change: opacity, transform;
+}
+
+/* Stagger beim Einblenden (aufsteigende Delays) */
+.content-wrapper:hover .label-item:nth-child(1) {
+	transition-delay: 0.05s;
+}
+.content-wrapper:hover .label-item:nth-child(2) {
+	transition-delay: 0.1s;
+}
+.content-wrapper:hover .label-item:nth-child(3) {
+	transition-delay: 0.15s;
+}
+
+/* Stagger beim Ausblenden (umgekehrte Reihenfolge) */
+.label-wrapper .label-item:nth-child(1) {
+	transition-delay: 0.15s;
+}
+.label-wrapper .label-item:nth-child(2) {
+	transition-delay: 0.1s;
+}
+.label-wrapper .label-item:nth-child(3) {
+	transition-delay: 0.05s;
 }
 
 .image {
