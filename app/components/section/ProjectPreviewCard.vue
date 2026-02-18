@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import Flag from '~/components/icon/Flag.vue';
+import ChartIncreasing from '~/components/icon/ChartIncreasing.vue';
+import Wrench from '~/components/icon/Wrench.vue';
+
 const props = defineProps<{
+	projectCustomer: string;
 	labelGoal: string;
 	labelResult: string;
 	labelServices: string;
@@ -9,23 +14,23 @@ const props = defineProps<{
 <template>
 	<div class="content-wrapper shadow-1">
 		<h3 class="type-heading-24 text-highlight on-dark">
-			Lüneburger Heide Immobilien
+			{{ props.projectCustomer }}
 		</h3>
 		<div class="label-wrapper vflex gap-8">
 			<Label
 				class="label-item"
 				:label="props.labelGoal">
-				<IconLandPlot />
+				<Flag />
 			</Label>
 			<Label
 				class="label-item"
 				:label="props.labelResult">
-				<IconLandPlot />
+				<ChartIncreasing />
 			</Label>
 			<Label
 				class="label-item"
-				:label="props.labelResult">
-				<IconLandPlot />
+				:label="props.labelServices">
+				<Wrench />
 			</Label>
 		</div>
 
