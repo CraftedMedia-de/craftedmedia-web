@@ -48,6 +48,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.30) inset, 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
+.shadow-1 {
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.70) inset, 0 4px 6px 0 rgba(0, 0, 0, 0.30), 0 6px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
 strong {
   color: var(--text-highlight);
   font-weight: inherit;
@@ -128,4 +132,8 @@ button {
   position: relative;
   width: 100%;
   display: block;
+}
+
+.border-radius-inherit {
+  border-radius: inherit;
 }
