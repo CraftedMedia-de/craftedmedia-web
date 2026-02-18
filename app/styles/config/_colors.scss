@@ -83,6 +83,9 @@
   --text-muted: var(--neutral-600);
   --text-muted-on-dark: var(--neutral-300);
 
+  --text-brand: var(--brand-500);
+
+
   /* Card colors */
   --card-background: var(--neutral-0);
   --card-text-body: var(--neutral-600);
@@ -101,4 +104,8 @@
 
   --button-bright-background: var(--neutral-0);
   --button-brand-background: var(--brand-500);
+
+  /* Label colors */
+  --label-dark-background: var(--neutral-900);
 }
+
