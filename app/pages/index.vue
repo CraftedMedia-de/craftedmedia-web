@@ -5,6 +5,7 @@ import Services from '~/components/section/Services.vue';
 import Process from '~/components/section/Process.vue';
 import CustomersAndPartners from '~/components/section/CustomersAndPartners.vue';
 import ProjectsOverview from '~/components/section/ProjectsOverview.vue';
+import CTA from '~/components/section/CTA.vue';
 </script>
 
 <template>
@@ -31,6 +32,10 @@ import ProjectsOverview from '~/components/section/ProjectsOverview.vue';
 
 	<section>
 		<CustomersAndPartners />
+	</section>
+
+	<section class="breakout">
+		<CTA />
 	</section>
 </template>
 
