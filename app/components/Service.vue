@@ -64,7 +64,7 @@ const props = defineProps<{
 
 .video {
 	aspect-ratio: 416 / 311;
-	border-radius: 1.5rem;
+	border-radius: 1rem;
 	overflow: clip;
 	object-fit: fill;
 }
