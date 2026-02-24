@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import LandPlot from '~/components/icon/LandPlot.vue';
+import Mail from '~/components/icon/Mail.vue';
+import Phone from '~/components/icon/Phone.vue';
 </script>
 
 <template>
@@ -26,7 +28,7 @@ import LandPlot from '~/components/icon/LandPlot.vue';
 					<div
 						class="icon-background vflex-center-center padding-16">
 						<IconBase>
-							<LandPlot class="icon-24" />
+							<Mail class="icon-24" />
 						</IconBase>
 					</div>
 					<div class="vflex gap-4">
@@ -42,7 +44,7 @@ import LandPlot from '~/components/icon/LandPlot.vue';
 					<div
 						class="icon-background vflex-center-center padding-16">
 						<IconBase>
-							<LandPlot class="icon-24" />
+							<Phone class="icon-24" />
 						</IconBase>
 					</div>
 					<div class="vflex gap-4">
