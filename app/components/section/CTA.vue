@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LandPlot from '~/components/icon/LandPlot.vue';
 import Mail from '~/components/icon/Mail.vue';
 import Phone from '~/components/icon/Phone.vue';
 </script>
