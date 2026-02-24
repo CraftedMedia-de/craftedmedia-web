@@ -24,3 +24,11 @@
   .margin-bottom-#{$key} { margin-bottom: $val; }
   .margin-left-#{$key} { margin-left: $val; }
 }
+
+@each $key, $val in $space {
+  .padding-v-#{$key} { padding-block: $val;  }
+  .padding-h-#{$key} { padding-inline: $val; }
+
+  .margin-v-#{$key} { margin-block: $val; }
+  .margin-h-#{$key} { margin-inline: $val; }
+}
