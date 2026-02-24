@@ -3,7 +3,8 @@ import ProjectPreviewCard from '~/components/ProjectPreviewCard.vue';
 </script>
 
 <template>
-	<div class="background-dark">
+	<section
+		class="background-dark padding-top-128 padding-bottom-128 border-radius-32">
 		<h2
 			class="type-heading-48 text-highlight on-dark margin-bottom-64">
 			Aktuelle Projekte aus unserem Haus
@@ -35,7 +36,7 @@ import ProjectPreviewCard from '~/components/ProjectPreviewCard.vue';
 				label-result="+127 % Conversion Rate"
 				label-services="Design · Entwicklung · Performance" />
 		</div>
-	</div>
+	</section>
 </template>
 
 <style scoped>

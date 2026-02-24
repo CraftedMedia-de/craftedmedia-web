@@ -23,9 +23,7 @@ import ProjectsOverview from '~/components/section/ProjectsOverview.vue';
 		<Services />
 	</section>
 
-	<section class="full-width">
-		<ProjectsOverview />
-	</section>
+	<ProjectsOverview class="full-width" />
 
 	<section>
 		<Process />
