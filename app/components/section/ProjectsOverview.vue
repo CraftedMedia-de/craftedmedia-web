@@ -3,8 +3,7 @@ import ProjectPreviewCard from '~/components/ProjectPreviewCard.vue';
 </script>
 
 <template>
-	<section
-		class="background-dark padding-top-128 padding-bottom-128 border-radius-32">
+	<section class="background-dark padding-v-128 border-radius-32">
 		<h2
 			class="type-heading-48 text-highlight on-dark margin-bottom-64">
 			Aktuelle Projekte aus unserem Haus
