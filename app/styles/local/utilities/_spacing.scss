@@ -16,7 +16,7 @@
 @each $key, $val in $space {
   .padding-top-#{$key} { padding-top: $val; }
   .padding-right-#{$key} { padding-right: $val; }
-  .padding-botton-#{$key} { padding-bottom: $val; }
+  .padding-bottom-#{$key} { padding-bottom: $val; }
   .padding-left-#{$key} { padding-left: $val; }
 
   .margin-top-#{$key} { margin-top: $val; }
