@@ -7,6 +7,7 @@ import CustomersAndPartners from '~/components/section/CustomersAndPartners.vue'
 import ProjectsOverview from '~/components/section/ProjectsOverview.vue';
 import CTA from '~/components/section/CTA.vue';
 import FooterGlobal from '~/components/section/FooterGlobal.vue';
+import CustomerFeedback from '~/components/section/CustomerFeedback.vue';
 </script>
 
 <template>
@@ -30,6 +31,8 @@ import FooterGlobal from '~/components/section/FooterGlobal.vue';
 	<section>
 		<Process />
 	</section>
+
+	<CustomerFeedback class="full-width" />
 
 	<section>
 		<CustomersAndPartners />
