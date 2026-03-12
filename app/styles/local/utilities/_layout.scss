@@ -41,6 +41,14 @@ $justify-content: (
   }
 }
 
-.align-items-center {
-    align-items: center;
+@each $justify-key, $justify-value in $justify-content {
+  .justify-#{$justify-key} {
+    justify-content: $justify-value;
+  }
+}
+
+@each $align-key, $align-value in $align-items {
+  .align-#{$align-key} {
+    align-items: $align-value;
+  }
 }
