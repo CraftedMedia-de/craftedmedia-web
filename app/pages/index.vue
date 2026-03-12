@@ -6,6 +6,7 @@ import Process from '~/components/section/Process.vue';
 import CustomersAndPartners from '~/components/section/CustomersAndPartners.vue';
 import ProjectsOverview from '~/components/section/ProjectsOverview.vue';
 import CTA from '~/components/section/CTA.vue';
+import FooterGlobal from '~/components/section/FooterGlobal.vue';
 </script>
 
 <template>
@@ -36,6 +37,10 @@ import CTA from '~/components/section/CTA.vue';
 
 	<section class="breakout">
 		<CTA />
+	</section>
+
+	<section class="breakout">
+		<FooterGlobal />
 	</section>
 </template>
 
