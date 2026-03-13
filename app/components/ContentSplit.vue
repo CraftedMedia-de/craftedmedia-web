@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import FooterGlobal from '~/components/section/FooterGlobal.vue';
-
 interface Props {
 	heading: string;
 	paragraph?: string;
