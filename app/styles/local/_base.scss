@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   &:not(.no-dot)::after {
     content: ".";
     display: inline-block;
-    margin-left: 0.05em;
+    margin-left: 0.25rem;
     font-weight: inherit;
     line-height: 1;
     pointer-events: none;
