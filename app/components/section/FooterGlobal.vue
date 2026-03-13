@@ -114,10 +114,12 @@ const phone = '+49 123 456789';
 					class="footer-legal text-muted type-body-14 hflex gap-32 justify-center">
 					<li>© 2025 CraftedMedia</li>
 					<li>
-						<NuxtLink to="/agb">AGB</NuxtLink>
+						<NuxtLink to="/legal/agb">AGB</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/datenschutz">Datenschutz</NuxtLink>
+						<NuxtLink to="/legal/datenschutz">
+							Datenschutz
+						</NuxtLink>
 					</li>
 					<li>Cookie Vereinbarung</li>
 				</ul>
