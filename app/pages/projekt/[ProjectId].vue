@@ -119,10 +119,12 @@ const filteredProjects = computed(() => {
 		</div>
 	</section>
 
-	<section>
+	<section class="breakout">
 		<CTA />
 	</section>
-	<FooterGlobal />
+	<section class="breakout">
+		<FooterGlobal />
+	</section>
 </template>
 
 <style scoped>
