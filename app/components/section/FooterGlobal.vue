@@ -4,7 +4,7 @@ import Instagram from '~/components/icon/Instagram.vue';
 import LinkedIn from '~/components/icon/LinkedIn.vue';
 
 const email = 'info@craftedmedia.de';
-const phone = '+49 123 456789';
+const phone = '+49 4171 6689551';
 </script>
 
 <template>
@@ -88,7 +88,7 @@ const phone = '+49 123 456789';
 				class="footer-grid text-highlight on-dark margin-bottom-32">
 				<a
 					class="footer-social-button"
-					href="https://www.instagram.com"
+					href="https://www.instagram.com/crafted.media/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Instagram (öffnet in neuem Tab)">
@@ -99,7 +99,7 @@ const phone = '+49 123 456789';
 				</a>
 				<a
 					class="footer-social-button"
-					href="https://www.linkedin.com"
+					href="https://www.linkedin.com/company/craftedmediagbr/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="LinkedIn (öffnet in neuem Tab)">
