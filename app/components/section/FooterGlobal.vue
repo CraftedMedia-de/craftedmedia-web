@@ -131,6 +131,7 @@ const phone = '+49 123 456789';
 <style scoped>
 .footer-body {
 	border-radius: 1.5rem;
+	margin-bottom: 1rem;
 	padding: 4rem;
 	gap: 4rem;
 	background:
