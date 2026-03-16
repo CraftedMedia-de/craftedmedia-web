@@ -1,166 +1,92 @@
-export type ProjectContentBlock =
-	| { type: 'text'; heading: string; body: string }
-	| { type: 'image'; src: string; alt: string; caption?: string }
-	| { type: 'list'; heading: string; items: string[] };
-
 export type ProjectCategory = 'webdesign' | 'entwicklung' | 'fotografie';
 
+export interface ProjectImage {
+	src: string;
+	alt: string;
+	caption?: string;
+}
+
 export interface Project {
-	id: string; // wird in URL verwendet, z.B. /projekt/craftedmedia
+	id: string;
 	category: ProjectCategory;
 	isTeaser: boolean;
 	isHighlight: boolean;
+
+	// Hauptinfos (global)
 	customer: string;
+	title: string;
+
+	// Card/Overview
 	teaserImage: string;
 	teaserAlt: string;
 	labelGoal: string;
 	labelResult: string;
 	labelServices: string;
-	title: string;
-	intro: string;
-	blocks: ProjectContentBlock[];
+
+	// Detailseite
+	contextText: string[];
+	solutionText: string[];
+	images: ProjectImage[];
 }
 
 export const projects: Project[] = [
-	{
-		id: 'craftedmedia',
-		category: 'webdesign',
-		isTeaser: true,
-		isHighlight: true,
-		customer: 'CraftedMedia',
-		teaserImage: '/images/laptop-on-sofa.png',
-		teaserAlt: 'Laptop auf Sofa',
-		labelGoal: 'Mehr Immobilienanfragen',
-		labelResult: '+127 % Conversion Rate',
-		labelServices: 'Design · Entwicklung · Performance',
-		title: 'Website Relaunch CraftedMedia',
-		intro: 'Relaunch mit Fokus auf Conversion und Markenwirkung.',
-		blocks: [
-			{
-				type: 'text',
-				heading: 'Ausgangslage',
-				body: 'Die alte Seite war technisch und visuell veraltet.',
-			},
-			{
-				type: 'image',
-				src: '/images/laptop-on-sofa.png',
-				alt: 'Hero Shot',
-			},
-			{
-				type: 'list',
-				heading: 'Ergebnisse',
-				items: [
-					'+127 % Conversion',
-					'Schnellere Ladezeit',
-					'Bessere Leads',
-				],
-			},
-		],
-	},
 	{
 		id: 'bergholzimmobilien',
 		category: 'webdesign',
 		isTeaser: true,
 		isHighlight: false,
 		customer: 'Bergholzimmobilien',
+		title: 'Wo Struktur Freiheit schafft',
 		teaserImage: '/images/laptop-on-sofa.png',
 		teaserAlt: 'Laptop auf Sofa',
 		labelGoal: 'Mehr Immobilienanfragen',
 		labelResult: '+127 % Conversion Rate',
 		labelServices: 'Design · Entwicklung · Performance',
-		title: 'Website Relaunch CraftedMedia',
-		intro: 'Relaunch mit Fokus auf Conversion und Markenwirkung.',
-		blocks: [
+		contextText: [
+			'Bergholz Immobilien hat sich mit CraftedMedia verpartnert, um zentrale Herausforderungen ihrer Website anzugehen: Inhalte ließen sich nur umständlich aktualisieren, Änderungen waren oft zeitaufwendig und die laufende Pflege wurde zunehmend ineffizient. Ziel war es, die digitale Präsenz so aufzustellen, dass sie im Alltag schneller, flexibler und verlässlicher genutzt werden kann.',
+		],
+		solutionText: [
+			'CraftedMedia hat die bestehende Website-Struktur von Bergholz Immobilien vollständig von WordPress zu Webflow übertragen und dabei die Grundlage für eine deutlich effizientere Content-Pflege geschaffen. Der Fokus lag darauf, dass neue Inhalte künftig schneller online gehen – ohne Plugin-Wartung, Update-Stress oder unnötige technische Umwege.',
+			'Dafür haben wir die Seite in Webflow neu strukturiert und so aufgebaut, dass wiederkehrende Inhalte (z. B. Leistungsbereiche, Standort-Infos, Referenzen oder News) über klare, wiederverwendbare Komponenten gepflegt werden können. Das bedeutet: Bergholz kann Inhalte heute deutlich einfacher ergänzen oder anpassen, ohne dass jedes Mal in das „Technische“ eingegriffen werden muss.',
+			'Ein weiterer Kernpunkt war die Performance. Durch die Umstellung auf Webflow profitiert die Website von einem modernen Hosting-Setup und sauberer, schlanker Auslieferung der Seite – was sich direkt in schnelleren Ladezeiten und einer besseren Nutzererfahrung bemerkbar macht. Gerade im Immobilienbereich ist das entscheidend: Interessenten entscheiden innerhalb weniger Sekunden, ob eine Website professionell wirkt und Vertrauen schafft.',
+			'Zusätzlich wurde die Lösung so umgesetzt, dass sie skalierbar bleibt: Wenn Bergholz künftig neue Inhalte, Landingpages oder zusätzliche Unterseiten braucht, lässt sich das schnell erweitern – ohne dass die Website “komplizierter” wird. Ergebnis: ein flexibleres System, weniger laufender Pflegeaufwand und eine Website, die sowohl technisch als auch inhaltlich langfristig mitwachsen kann.',
+		],
+		images: [
 			{
-				type: 'text',
-				heading: 'Ausgangslage',
-				body: 'Die alte Seite war technisch und visuell veraltet.',
-			},
-			{
-				type: 'image',
 				src: '/images/laptop-on-sofa.png',
-				alt: 'Hero Shot',
+				alt: 'Projektansicht Bergholzimmobilien',
 			},
 			{
-				type: 'list',
-				heading: 'Ergebnisse',
-				items: [
-					'+127 % Conversion',
-					'Schnellere Ladezeit',
-					'Bessere Leads',
-				],
+				src: '/images/test.png',
+				alt: 'Projektansicht Bergholzimmobilien',
 			},
 		],
 	},
-
 	{
-		id: 'lueneburgerheideimmobilien',
+		id: 'craftedmedia',
 		category: 'webdesign',
 		isTeaser: true,
 		isHighlight: false,
-		customer: 'Lüneburger Heide Immobilien',
-		teaserImage: '/images/laptop-on-sofa.png',
+		customer: 'CraftedMedia',
+		title: 'Wo Struktur Freiheit schafft',
+		teaserImage: '/images/test.png',
 		teaserAlt: 'Laptop auf Sofa',
 		labelGoal: 'Mehr Immobilienanfragen',
 		labelResult: '+127 % Conversion Rate',
 		labelServices: 'Design · Entwicklung · Performance',
-		title: 'Website Relaunch CraftedMedia',
-		intro: 'Relaunch mit Fokus auf Conversion und Markenwirkung.',
-		blocks: [
-			{
-				type: 'text',
-				heading: 'Ausgangslage',
-				body: 'Die alte Seite war technisch und visuell veraltet.',
-			},
-			{
-				type: 'image',
-				src: '/images/laptop-on-sofa.png',
-				alt: 'Hero Shot',
-			},
-			{
-				type: 'list',
-				heading: 'Ergebnisse',
-				items: [
-					'+127 % Conversion',
-					'Schnellere Ladezeit',
-					'Bessere Leads',
-				],
-			},
+		contextText: [
+			'Bergholz Immobilien hat sich mit CraftedMedia verpartnert, um zentrale Herausforderungen ihrer Website anzugehen: Inhalte ließen sich nur umständlich aktualisieren, Änderungen waren oft zeitaufwendig und die laufende Pflege wurde zunehmend ineffizient. Ziel war es, die digitale Präsenz so aufzustellen, dass sie im Alltag schneller, flexibler und verlässlicher genutzt werden kann.',
 		],
-	},
-
-	{
-		id: 'hanselicht',
-		category: 'webdesign',
-		isTeaser: false,
-		isHighlight: false,
-		customer: 'Hanselicht',
-		teaserImage: '/images/laptop-on-sofa.png',
-		teaserAlt: 'Laptop auf Sofa',
-		labelGoal: 'Mehr Immobilienanfragen',
-		labelResult: '+127 % Conversion Rate',
-		labelServices: 'Design · Entwicklung · Performance',
-		title: 'Website Relaunch CraftedMedia',
-		intro: 'Relaunch mit Fokus auf Conversion und Markenwirkung.',
-		blocks: [
+		solutionText: [
+			'CraftedMedia hat die bestehende Website-Struktur von Bergholz Immobilien vollständig von WordPress zu Webflow übertragen und dabei die Grundlage für eine deutlich effizientere Content-Pflege geschaffen. Der Fokus lag darauf, dass neue Inhalte künftig schneller online gehen – ohne Plugin-Wartung, Update-Stress oder unnötige technische Umwege.',
+			'Dafür haben wir die Seite in Webflow neu strukturiert und so aufgebaut, dass wiederkehrende Inhalte (z. B. Leistungsbereiche, Standort-Infos, Referenzen oder News) über klare, wiederverwendbare Komponenten gepflegt werden können. Das bedeutet: Bergholz kann Inhalte heute deutlich einfacher ergänzen oder anpassen, ohne dass jedes Mal in das „Technische“ eingegriffen werden muss.',
+			'Ein weiterer Kernpunkt war die Performance. Durch die Umstellung auf Webflow profitiert die Website von einem modernen Hosting-Setup und sauberer, schlanker Auslieferung der Seite – was sich direkt in schnelleren Ladezeiten und einer besseren Nutzererfahrung bemerkbar macht. Gerade im Immobilienbereich ist das entscheidend: Interessenten entscheiden innerhalb weniger Sekunden, ob eine Website professionell wirkt und Vertrauen schafft.',
+			'Zusätzlich wurde die Lösung so umgesetzt, dass sie skalierbar bleibt: Wenn Bergholz künftig neue Inhalte, Landingpages oder zusätzliche Unterseiten braucht, lässt sich das schnell erweitern – ohne dass die Website “komplizierter” wird. Ergebnis: ein flexibleres System, weniger laufender Pflegeaufwand und eine Website, die sowohl technisch als auch inhaltlich langfristig mitwachsen kann.',
+		],
+		images: [
 			{
-				type: 'text',
-				heading: 'Ausgangslage',
-				body: 'Die alte Seite war technisch und visuell veraltet.',
-			},
-			{
-				type: 'image',
-				src: '/images/laptop-on-sofa.png',
-				alt: 'Hero Shot',
-			},
-			{
-				type: 'list',
-				heading: 'Ergebnisse',
-				items: [
-					'+127 % Conversion',
-					'Schnellere Ladezeit',
-					'Bessere Leads',
-				],
+				src: '/images/test.png',
+				alt: 'Projektansicht Bergholzimmobilien',
 			},
 		],
 	},
