@@ -29,7 +29,7 @@ import CustomerFeedback from '~/components/section/CustomerFeedback.vue';
 	<ProjectsOverview
 		class="full-width"
 		:categories="['webdesign']"
-		:only-highlighted="true"
+		:only-teaser="true"
 		:limit="3" />
 
 	<section>

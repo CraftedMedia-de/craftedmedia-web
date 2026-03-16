@@ -26,8 +26,8 @@ const filteredProjects = computed(() => {
 		list = list.filter((p) => props.categories!.includes(p.category));
 	}
 
-	if (props.onlyHighlighted) {
-		list = list.filter((p) => p.isHighlight);
+	if (props.onlyTeaser) {
+		list = list.filter((p) => p.isTeaser);
 	}
 
 	if (props.limit != null) {
@@ -78,7 +78,7 @@ const filteredProjects = computed(() => {
 		grid-template-columns: 1fr;
 	}
 
-	.project-highlight {
+	.projects-grid > article:first-child {
 		grid-column: 1 / span 1;
 	}
 }
