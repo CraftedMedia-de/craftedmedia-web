@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-	heading: string;
+	heading?: string;
 	paragraph?: string;
 	customParagraph?: boolean;
 }
