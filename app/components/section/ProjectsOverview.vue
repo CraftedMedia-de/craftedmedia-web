@@ -1,5 +1,41 @@
 <script setup lang="ts">
 import ProjectPreviewCard from '~/components/ProjectPreviewCard.vue';
+
+import { projects, type ProjectCategory } from '~/data/projects';
+
+const props = withDefaults(
+	defineProps<{
+		categories?: ProjectCategory[]; // z.B. ['webdesign']
+		onlyTeaser?: boolean;
+		projectIds?: string[]; // optional exakte Auswahl
+		limit?: number; // optional Begrenzung
+	}>(),
+	{
+		onlyTeaser: false,
+	}
+);
+
+const filteredProjects = computed(() => {
+	let list = [...projects];
+
+	if (props.projectIds?.length) {
+		list = list.filter((p) => props.projectIds!.includes(p.id));
+	}
+
+	if (props.categories?.length) {
+		list = list.filter((p) => props.categories!.includes(p.category));
+	}
+
+	if (props.onlyHighlighted) {
+		list = list.filter((p) => p.isHighlight);
+	}
+
+	if (props.limit != null) {
+		list = list.slice(0, props.limit);
+	}
+
+	return list;
+});
 </script>
 
 <template>
@@ -10,30 +46,18 @@ import ProjectPreviewCard from '~/components/ProjectPreviewCard.vue';
 		</h2>
 
 		<div class="projects-grid gap-32">
-			<ProjectPreviewCard
-				class="project-highlight"
-				projectCustomer="CraftedMedia"
-				projectImageSrc="/images/laptop-on-sofa.png"
-				projectImageAlt="test"
-				label-goal="Mehr Immobilienanfragen"
-				label-result="+127 % Conversion Rate"
-				label-services="Design · Entwicklung · Performance" />
-
-			<ProjectPreviewCard
-				projectCustomer="CraftedMedia"
-				projectImageSrc="/images/test.png"
-				projectImageAlt="test"
-				label-goal="Mehr Immobilienanfragen"
-				label-result="+127 % Conversion Rate"
-				label-services="Design · Entwicklung · Performance" />
-
-			<ProjectPreviewCard
-				projectCustomer="CraftedMedia"
-				projectImageSrc="/images/laptop-on-sofa.png"
-				projectImageAlt="test"
-				label-goal="Mehr Immobilienanfragen"
-				label-result="+127 % Conversion Rate"
-				label-services="Design · Entwicklung · Performance" />
+			<article
+				v-for="p in filteredProjects"
+				:key="p.id">
+				<ProjectPreviewCard
+					:project-customer="p.customer"
+					:project-image-src="p.teaserImage"
+					:project-image-alt="p.teaserAlt"
+					:label-goal="p.labelGoal"
+					:label-result="p.labelResult"
+					:label-services="p.labelServices"
+					:project-link="`/projekt/${p.id}`" />
+			</article>
 		</div>
 	</section>
 </template>
@@ -45,7 +69,7 @@ import ProjectPreviewCard from '~/components/ProjectPreviewCard.vue';
 	grid-template-columns: 1fr 1fr;
 }
 
-.project-highlight {
+.projects-grid > article:first-child {
 	grid-column: 1 / span 2;
 }
 

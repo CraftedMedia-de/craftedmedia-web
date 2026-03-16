@@ -26,7 +26,11 @@ import CustomerFeedback from '~/components/section/CustomerFeedback.vue';
 		<Services />
 	</section>
 
-	<ProjectsOverview class="full-width" />
+	<ProjectsOverview
+		class="full-width"
+		:categories="['webdesign']"
+		:only-highlighted="true"
+		:limit="3" />
 
 	<section>
 		<Process />

@@ -3,7 +3,8 @@ import { computed } from 'vue';
 import { createError, useRoute } from '#imports';
 import { projects } from '~/data/projects';
 
-const router = useRouter();
+const route = useRoute();
+
 const projectId = computed(() => String(route.params.ProjectId ?? ''));
 
 const project = computed(() =>
@@ -19,7 +20,7 @@ if (!project.value) {
 </script>
 
 <template>
-	<section>
+	<section v-if="project">
 		<h1>{{ project.title }}</h1>
 		<p>{{ project.intro }}</p>
 
@@ -53,5 +54,3 @@ if (!project.value) {
 		</template>
 	</section>
 </template>
-
-<style scoped></style>

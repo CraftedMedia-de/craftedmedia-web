@@ -10,41 +10,46 @@ const props = defineProps<{
 	labelGoal: string;
 	labelResult: string;
 	labelServices: string;
+	projectLink: string;
 }>();
 </script>
 
 <template>
-	<div class="content-wrapper shadow-l">
-		<h3 class="type-heading-24 text-highlight on-dark no-dot">
-			{{ props.projectCustomer }}
-		</h3>
-		<div class="label-wrapper vflex gap-8">
-			<Label
-				class="label-item"
-				:label="props.labelGoal">
-				<Flag />
-			</Label>
-			<Label
-				class="label-item"
-				:label="props.labelResult">
-				<ChartIncreasing />
-			</Label>
-			<Label
-				class="label-item"
-				:label="props.labelServices">
-				<Wrench />
-			</Label>
-		</div>
+	<NuxtLink :to="props.projectLink">
+		<div class="content-wrapper shadow-l">
+			<h3 class="type-heading-24 text-highlight on-dark no-dot">
+				{{ props.projectCustomer }}
+			</h3>
+			<div class="label-wrapper vflex gap-8">
+				<Label
+					class="label-item"
+					:label="props.labelGoal">
+					<Flag />
+				</Label>
+				<Label
+					class="label-item"
+					:label="props.labelResult">
+					<ChartIncreasing />
+				</Label>
+				<Label
+					class="label-item"
+					:label="props.labelServices">
+					<Wrench />
+				</Label>
+			</div>
 
-		<div class="card-image-wrapper">
-			<div class="image-overlay-dark border-radius-inherit"></div>
-			<div class="image-overlay-brand border-radius-inherit"></div>
-			<NuxtImg
-				class="image border-radius-inherit"
-				:src="props.projectImageSrc"
-				:alt="props.projectImageAlt" />
+			<div class="card-image-wrapper">
+				<div
+					class="image-overlay-dark border-radius-inherit"></div>
+				<div
+					class="image-overlay-brand border-radius-inherit"></div>
+				<NuxtImg
+					class="image border-radius-inherit"
+					:src="props.projectImageSrc"
+					:alt="props.projectImageAlt" />
+			</div>
 		</div>
-	</div>
+	</NuxtLink>
 </template>
 
 <style scoped>
