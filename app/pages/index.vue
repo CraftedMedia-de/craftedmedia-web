@@ -8,6 +8,7 @@ import ProjectsOverview from '~/components/section/ProjectsOverview.vue';
 import CTA from '~/components/section/CTA.vue';
 import FooterGlobal from '~/components/section/FooterGlobal.vue';
 import CustomerFeedback from '~/components/section/CustomerFeedback.vue';
+import ImageGrid from '~/components/section/ImageGrid.vue';
 </script>
 
 <template>
@@ -41,6 +42,8 @@ import CustomerFeedback from '~/components/section/CustomerFeedback.vue';
 	<section>
 		<CustomersAndPartners />
 	</section>
+
+	<ImageGrid></ImageGrid>
 
 	<section class="breakout">
 		<CTA />
