@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Button from '~/components/Button.vue';
+
 const props = defineProps<{
 	imageSrc: string;
 	imageAlt: string;
@@ -24,8 +26,17 @@ const props = defineProps<{
 					Für Unternehmen, die nachhaltig wachsen wollen.
 				</div>
 				<div class="hflex-center-start gap-16">
-					<button>Mehr erfahren</button>
-					<button>Projekt unverbindlich besprechen</button>
+					<Button
+						variant="solid-bright"
+						dot
+						type="button">
+						Mehr erfahren
+					</Button>
+					<div class="text-highlight on-dark">
+						<Button variant="ghost-on-dark">
+							Projekt unverbindlich besprechen
+						</Button>
+					</div>
 				</div>
 			</div>
 			<div class="hero-image overlay"></div>

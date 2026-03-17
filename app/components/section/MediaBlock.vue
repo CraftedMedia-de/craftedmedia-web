@@ -38,7 +38,7 @@ const props = defineProps<{
 				langfristige Wirkung und Wachstum.
 			</p>
 
-			<button>So setzen wir das in Projekten um</button>
+			<Button dot>So setzen wir das in Projekten um</Button>
 		</div>
 	</div>
 </template>

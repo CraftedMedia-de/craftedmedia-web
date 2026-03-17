@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ColorSwatch from '~/components/designSystem/ColorSwatch.vue'
+import ColorSwatch from '~/components/designSystem/ColorSwatch.vue';
 
 const aliasTokens = [
 	'--neutral-900',
@@ -7,8 +7,8 @@ const aliasTokens = [
 	'--neutral-0',
 	'--neutral-50',
 	'--neutral-300',
-	'--neutral-600'
-]
+	'--neutral-600',
+];
 
 const mappedTokens = [
 	'--page-background',
@@ -28,8 +28,7 @@ const mappedTokens = [
 	'--button-dark-background',
 	'--button-bright-background',
 	'--button-brand-background',
-]
-
+];
 </script>
 
 <template>
@@ -41,7 +40,10 @@ const mappedTokens = [
 			<div class="swatch-container">
 				<h3 class="type-heading-32">Alias Tokens</h3>
 				<div class="swatches-wrapper">
-					<ColorSwatch v-for="aliasToken in aliasTokens" :key="aliasToken" :token="aliasToken" />
+					<ColorSwatch
+						v-for="aliasToken in aliasTokens"
+						:key="aliasToken"
+						:token="aliasToken" />
 
 					<ColorSwatch token="--neutral-900" />
 				</div>
@@ -50,7 +52,10 @@ const mappedTokens = [
 			<div class="swatch-container">
 				<h3 class="type-heading-32">Mapped Tokens</h3>
 				<div class="swatches-wrapper">
-					<ColorSwatch v-for="mappedToken in mappedTokens" :key="mappedToken" :token="mappedToken" />
+					<ColorSwatch
+						v-for="mappedToken in mappedTokens"
+						:key="mappedToken"
+						:token="mappedToken" />
 				</div>
 			</div>
 		</section>
@@ -80,12 +85,46 @@ const mappedTokens = [
 				<h3 class="type-heading-32">Display</h3>
 				<div class="vflex-start-start">
 					<div class="type-display-64">.type-display-64</div>
-
 				</div>
 			</div>
 		</section>
-	</div>
 
+		<section>
+			<Button>
+				<IconBase>
+					<IconNotebookPen />
+				</IconBase>
+				Hallo
+			</Button>
+
+			<Button
+				variant="solid-bright"
+				size="lg">
+				<IconBase>
+					<IconNotebookPen />
+				</IconBase>
+				Hallo
+			</Button>
+
+			<Button
+				variant="ghost"
+				size="md">
+				<IconBase>
+					<IconNotebookPen />
+				</IconBase>
+				Hallo
+			</Button>
+
+			<Button
+				variant="solid-brand"
+				size="sm">
+				<IconBase>
+					<IconNotebookPen />
+				</IconBase>
+				Hallo
+			</Button>
+		</section>
+	</div>
 </template>
 
 <style scoped>

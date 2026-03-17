@@ -39,7 +39,7 @@ import Rocket from '~/components/icon/Rocket.vue';
 				Lass uns gemeinsam schauen, ob das auch für dein Projekt
 				passt.
 			</p>
-			<button>Unverbindliches Gespräch starten</button>
+			<Button dot>Unverbindliches Gespräch starten</Button>
 		</div>
 	</div>
 </template>

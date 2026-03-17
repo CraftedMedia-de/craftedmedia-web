@@ -51,15 +51,16 @@ const props = defineProps({
 			</div>
 
 			<div class="card-section-navigation">
-				<NuxtLink
+				<Button
+					dot
 					:to="{
 						name: 'projekt-ProjectId',
 						params: {
 							ProjectId: props.projectInformation?.id,
 						},
 					}">
-					<button>Mehr zum Projekt</button>
-				</NuxtLink>
+					Mehr zum Projekt
+				</Button>
 			</div>
 		</div>
 	</div>

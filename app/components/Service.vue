@@ -40,7 +40,7 @@ const props = defineProps<{
 			</video>
 			<div class="vflex-start-start gap-32">
 				<slot />
-				<button>Mehr zu {{ props.service }}</button>
+				<Button dot>Mehr zu {{ props.service }}</Button>
 			</div>
 
 			<Accordion

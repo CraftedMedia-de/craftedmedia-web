@@ -103,7 +103,20 @@
   --button-dark-text: var(--neutral-0);
 
   --button-bright-background: var(--neutral-0);
+  --button-bright-background-hover: var(--neutral-50);
+  --button-bright-text: var(--neutral-900);
+
   --button-brand-background: var(--brand-500);
+  --button-brand-background-hover: var(--brand-500-transparent-80);
+  --button-brand-text: var(--neutral-0);
+
+  --button-ghost-background: transparent;
+  --button-ghost-background-hover: var(--neutral-300);
+  --button-ghost-background-hover-on-dark: var(--neutral-750);
+  --button-ghost-text: var(--neutral-900);
+  --button-ghost-text-hover: var(--neutral-900);
+
+  --button-dot-background: var(--brand-500);
 
   /* Label colors */
   --label-dark-background: var(--neutral-900);

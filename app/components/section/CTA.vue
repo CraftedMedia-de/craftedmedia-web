@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Mail from '~/components/icon/Mail.vue';
 import Phone from '~/components/icon/Phone.vue';
+import ArrowRight from '~/components/icon/ArrowRight.vue';
 
 const email = 'info@craftedmedia.de';
 const phone = '+49 4171 6689551';
@@ -16,7 +17,14 @@ const phone = '+49 4171 6689551';
 				Augenhöhe
 			</h2>
 			<div class="vflex-center-center gap-12">
-				<button>Dein unverbindliches Erstgespräch starten</button>
+				<Button
+					variant="solid-brand"
+					size="lg">
+					Dein unverbindliches Erstgespräch starten
+					<IconBase>
+						<ArrowRight />
+					</IconBase>
+				</Button>
 				<div class="hflex-center-start gap-16">
 					<div class="pulse-dot"></div>
 					<p class="type-heading-16 text-highlight on-dark">
