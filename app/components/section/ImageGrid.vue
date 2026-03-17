@@ -13,10 +13,9 @@ const updateParallax = () => {
 	if (!wrapper) return;
 
 	const rect = wrapper.getBoundingClientRect();
-	const vh = window.innerHeight;
 
 	// Progress 0..1, während die Section durch den Viewport läuft
-	const start = vh;
+	const start = window.innerHeight;
 	const end = -rect.height;
 	const progress = Math.min(
 		1,
@@ -62,7 +61,10 @@ onMounted(() => {
 	) as HTMLElement[];
 
 	observer = new IntersectionObserver(
-		([entry]) => {
+		(entries) => {
+			const entry = entries[0];
+			if (!entry) return;
+
 			if (entry.isIntersecting) {
 				addListeners();
 				requestUpdate();
