@@ -16,9 +16,9 @@ h1, h2, h3, h4, h5, h6 {
   &:not(.no-dot)::after {
     content: ".";
     display: inline-block;
-    margin-left: 0.25rem;
+    margin-left: 0em;
     font-weight: inherit;
-    line-height: 1;
+    line-height: inherit;
     pointer-events: none;
     color: var(--brand-dot)
   }
@@ -35,9 +35,9 @@ h1, h2, h3, h4, h5, h6 {
     &::after {
         content: ".";
         display: inline-block;
-        margin-left: 0.05em;
+        margin-left: 0em;
         font-weight: inherit;
-        line-height: 1;
+        line-height: inherit;
         pointer-events: none;
         color: var(--brand-dot)
     }
@@ -68,29 +68,6 @@ strong {
 
   &.on-dark {
     color: var(--text-highlight-on-dark);
-  }
-}
-
-button {
-  background-color: var(--button-dark-background);
-  color: var(--button-dark-text);
-
-  padding-inline: 1.5rem;
-  padding-block: 1rem;
-
-  border-radius: 1rem;
-  border: none;
-
-  width: fit-content;
-
-  font-size: 1rem;
-  font-weight: var(--font-heading-weight);
-  font-family: var(--font-heading), sans-serif;
-
-  transition: background-color 0.2s ease-in-out;
-
-  &:hover {
-    background-color: var(--button-dark-background-hover);
   }
 }
 

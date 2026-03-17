@@ -1,0 +1,22 @@
+button {
+  background-color: var(--button-dark-background);
+  color: var(--button-dark-text);
+
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+
+  border-radius: 1rem;
+  border: none;
+
+  width: fit-content;
+
+  font-size: 1rem;
+  font-weight: var(--font-heading-weight);
+  font-family: var(--font-heading), sans-serif;
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--button-dark-background-hover);
+  }
+}
