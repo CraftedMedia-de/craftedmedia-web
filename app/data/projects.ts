@@ -6,6 +6,11 @@ export interface ProjectImage {
 	caption?: string;
 }
 
+export interface ProjectMetric {
+	label: string;
+	value: string;
+}
+
 export interface Project {
 	id: string;
 	category: ProjectCategory;
@@ -14,6 +19,7 @@ export interface Project {
 
 	// Hauptinfos (global)
 	customer: string;
+	customerSummery: String;
 	title: string;
 
 	// Card/Overview
@@ -22,6 +28,8 @@ export interface Project {
 	labelGoal: string;
 	labelResult: string;
 	labelServices: string;
+	services: string[];
+	projectResults: ProjectMetric[];
 
 	// Detailseite
 	contextText: string[];
@@ -36,12 +44,40 @@ export const projects: Project[] = [
 		isTeaser: true,
 		isHighlight: false,
 		customer: 'Bergholzimmobilien',
+		customerSummery:
+			'Bergholz Immobilien kauft Immobilien direkt an (auch renovierungsbedürftige) und wickelt den Verkauf schnell, flexibel und ohne Maklercourtage für Verkäufer ab.',
 		title: 'Wo Struktur Freiheit schafft',
 		teaserImage: '/images/laptop-on-sofa.png',
 		teaserAlt: 'Laptop auf Sofa',
 		labelGoal: 'Mehr Immobilienanfragen',
 		labelResult: '+127 % Conversion Rate',
 		labelServices: 'Design · Entwicklung · Performance',
+		services: [
+			'Webdesign',
+			'Webentwicklung',
+			'UX/UI Konzept',
+			'Performance-Optimierung',
+			'Wartung / Betreuung',
+			'Fotografie / Content',
+		],
+		projectResults: [
+			{
+				label: 'Conversion Rate',
+				value: '+127 %',
+			},
+			{
+				label: 'Besucherwachstum',
+				value: '+300 %',
+			},
+			{
+				label: 'Ladezeit (LCP / TTFB)',
+				value: '0.4s',
+			},
+			{
+				label: 'Projektzeitraum',
+				value: '1 Monat',
+			},
+		],
 		contextText: [
 			'Bergholz Immobilien hat sich mit CraftedMedia verpartnert, um zentrale Herausforderungen ihrer Website anzugehen: Inhalte ließen sich nur umständlich aktualisieren, Änderungen waren oft zeitaufwendig und die laufende Pflege wurde zunehmend ineffizient. Ziel war es, die digitale Präsenz so aufzustellen, dass sie im Alltag schneller, flexibler und verlässlicher genutzt werden kann.',
 		],
@@ -62,18 +98,47 @@ export const projects: Project[] = [
 			},
 		],
 	},
+
 	{
-		id: 'craftedmedia',
+		id: 'lüneburger-heide-immobilien',
 		category: 'webdesign',
 		isTeaser: true,
 		isHighlight: false,
-		customer: 'CraftedMedia',
+		customer: 'Lüneburger Heide Immobilien',
+		customerSummery:
+			'Bergholz Immobilien kauft Immobilien direkt an (auch renovierungsbedürftige) und wickelt den Verkauf schnell, flexibel und ohne Maklercourtage für Verkäufer ab.',
 		title: 'Wo Struktur Freiheit schafft',
 		teaserImage: '/images/test.png',
 		teaserAlt: 'Laptop auf Sofa',
 		labelGoal: 'Mehr Immobilienanfragen',
 		labelResult: '+127 % Conversion Rate',
 		labelServices: 'Design · Entwicklung · Performance',
+		services: [
+			'Webdesign',
+			'Webentwicklung',
+			'UX/UI Konzept',
+			'Performance-Optimierung',
+			'Wartung / Betreuung',
+			'Fotografie / Content',
+		],
+		projectResults: [
+			{
+				label: 'Conversion Rate',
+				value: '+127 %',
+			},
+			{
+				label: 'Besucherwachstum',
+				value: '+300 %',
+			},
+			{
+				label: 'Ladezeit (LCP / TTFB)',
+				value: '0.4s',
+			},
+			{
+				label: 'Projektzeitraum',
+				value: '1 Monat',
+			},
+		],
 		contextText: [
 			'Bergholz Immobilien hat sich mit CraftedMedia verpartnert, um zentrale Herausforderungen ihrer Website anzugehen: Inhalte ließen sich nur umständlich aktualisieren, Änderungen waren oft zeitaufwendig und die laufende Pflege wurde zunehmend ineffizient. Ziel war es, die digitale Präsenz so aufzustellen, dass sie im Alltag schneller, flexibler und verlässlicher genutzt werden kann.',
 		],
@@ -84,6 +149,10 @@ export const projects: Project[] = [
 			'Zusätzlich wurde die Lösung so umgesetzt, dass sie skalierbar bleibt: Wenn Bergholz künftig neue Inhalte, Landingpages oder zusätzliche Unterseiten braucht, lässt sich das schnell erweitern – ohne dass die Website “komplizierter” wird. Ergebnis: ein flexibleres System, weniger laufender Pflegeaufwand und eine Website, die sowohl technisch als auch inhaltlich langfristig mitwachsen kann.',
 		],
 		images: [
+			{
+				src: '/images/laptop-on-sofa.png',
+				alt: 'Projektansicht Bergholzimmobilien',
+			},
 			{
 				src: '/images/test.png',
 				alt: 'Projektansicht Bergholzimmobilien',
