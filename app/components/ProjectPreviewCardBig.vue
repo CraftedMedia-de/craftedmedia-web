@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Project } from '~/data/projects';
-
 const props = defineProps({
 	projectInformation: Object,
 });
@@ -53,7 +51,13 @@ const props = defineProps({
 			</div>
 
 			<div class="card-section-navigation">
-				<NuxtLink :to="`/projekt/${props.projectInformation?.id}`">
+				<NuxtLink
+					:to="{
+						name: 'projekt-ProjectId',
+						params: {
+							ProjectId: props.projectInformation?.id,
+						},
+					}">
 					<button>Mehr zum Projekt</button>
 				</NuxtLink>
 			</div>
