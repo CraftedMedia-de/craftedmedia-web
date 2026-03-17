@@ -1,10 +1,26 @@
-//:root {
-//  --heading-margin-bottom: 0.5em;
-//}
+:root {
+  /* Body */
+  --fs-body-12: clamp(0.72rem, 0.70rem + 0.15vw, 0.75rem);
+  --fs-body-14: clamp(0.82rem, 0.79rem + 0.20vw, 0.875rem);
+  --fs-body-16: clamp(0.94rem, 0.90rem + 0.25vw, 1rem);
+  --fs-body-20: clamp(1.05rem, 0.95rem + 0.50vw, 1.25rem);
+
+  /* Heading */
+  --fs-heading-12: clamp(0.72rem, 0.70rem + 0.15vw, 0.75rem);
+  --fs-heading-14: clamp(0.82rem, 0.79rem + 0.20vw, 0.875rem);
+  --fs-heading-16: clamp(0.94rem, 0.90rem + 0.25vw, 1rem);
+  --fs-heading-20: clamp(1.05rem, 0.95rem + 0.50vw, 1.25rem);
+  --fs-heading-24: clamp(1.25rem, 1.05rem + 0.90vw, 1.5rem);
+  --fs-heading-32: clamp(1.5rem, 1.20rem + 1.40vw, 2rem);
+  --fs-heading-48: clamp(2rem, 1.35rem + 2.80vw, 3rem);
+
+  /* Display */
+  --fs-display-64: clamp(2.25rem, 1.40rem + 3.60vw, 4rem);
+}
 
   .type-body-20 {
     font-family: var(--font-body), sans-serif;
-    font-size: 1.25rem;
+    font-size: var(--fs-body-20);
     line-height: 1.5em;
     font-weight: var(--font-body-weight);
     letter-spacing: 0.013em;
@@ -12,7 +28,7 @@
 
   .type-body-16 {
     font-family: var(--font-body), sans-serif;
-    font-size: 1rem;
+    font-size: var(--fs-body-16);
     line-height: 1.6em;
     font-weight: var(--font-body-weight);
     letter-spacing: 0;
@@ -20,7 +36,7 @@
 
   .type-body-14 {
     font-family: var(--font-body), sans-serif;
-    font-size: 0.875rem;
+    font-size: var(--fs-body-14);
     line-height: 1.4em;
     font-weight: var(--font-body-weight);
     letter-spacing: 0.016em;
@@ -28,7 +44,7 @@
 
   .type-body-12 {
     font-family: var(--font-body), sans-serif;
-    font-size: 0.75rem;
+    font-size: var(--fs-body-12);
     line-height: 1.5em;
     font-weight: var(--font-body-weight);
     letter-spacing: 0.023em;
@@ -36,34 +52,34 @@
 
   .type-heading-48 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 3rem;
+    font-size: var(--fs-heading-48);
     line-height: 1.17em;
     font-weight: var(--font-heading-weight);
-    letter-spacing: -0.06em;
+    letter-spacing: -0.02em;
     //margin-bottom: var(--heading-margin-bottom);
   }
 
   .type-heading-32 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 2rem;
+    font-size: var(--fs-heading-32);
     line-height: 1.25em;
     font-weight: var(--font-heading-weight);
-    letter-spacing: 0;
+    letter-spacing: 0.02;
     //margin-bottom: var(--heading-margin-bottom);
   }
 
   .type-heading-24 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 1.5rem;
+    font-size: var(--fs-heading-24);
     line-height: 1.35em;
     font-weight: var(--font-heading-weight);
-    letter-spacing: 0;
+    letter-spacing: 0.03em;
     //margin-bottom: var(--heading-margin-bottom);
   }
 
   .type-heading-20 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 1.25rem;
+    font-size: var(--fs-heading-20);
     line-height: 1.6em;
     font-weight: var(--font-heading-weight);
     letter-spacing: 0.013em;
@@ -72,7 +88,7 @@
 
   .type-heading-16 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 1rem;
+    font-size: var(--fs-heading-16);;
     line-height: 1.5em;
     font-weight: var(--font-heading-weight);
     letter-spacing: 0.02em;
@@ -81,7 +97,7 @@
 
   .type-heading-14 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 0.875rem;
+    font-size: var(--fs-heading-14);
     line-height: 1.7em;
     font-weight: var(--font-heading-weight);
     letter-spacing: 0.02em;
@@ -90,7 +106,7 @@
 
   .type-heading-12 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 0.75rem;
+    font-size: var(--fs-heading-12);
     line-height: 1.65em;
     font-weight: var(--font-heading-weight);
     letter-spacing: 0.02em;
@@ -99,9 +115,17 @@
 
   .type-display-64 {
     font-family: var(--font-heading), sans-serif;
-    font-size: 4rem;
+    font-size: var(--fs-display-64);
     line-height: 1.08em;
     font-weight: var(--font-heading-weight);
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     //margin-bottom: var(--heading-margin-bottom);
+  }
+
+  p {
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-body-20);
+    line-height: 1.5em;
+    font-weight: var(--font-body-weight);
+    letter-spacing: 0.013em;
   }
