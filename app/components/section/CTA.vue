@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import Mail from '~/components/icon/Mail.vue';
 import Phone from '~/components/icon/Phone.vue';
+
+const email = 'info@craftedmedia.de';
+const phone = '+49 4171 6689551';
 </script>
 
 <template>
@@ -13,7 +16,7 @@ import Phone from '~/components/icon/Phone.vue';
 				Augenhöhe
 			</h2>
 			<div class="vflex-center-center gap-12">
-				<Button>Dein unverbindliches Erstgespräch starten</Button>
+				<button>Dein unverbindliches Erstgespräch starten</button>
 				<div class="hflex-center-start gap-16">
 					<div class="pulse-dot"></div>
 					<p class="type-heading-16 text-highlight on-dark">
@@ -23,7 +26,9 @@ import Phone from '~/components/icon/Phone.vue';
 			</div>
 
 			<div class="contact-grid gap-24">
-				<div class="contact-wrapper hflex-center-start gap-16">
+				<a
+					class="contact-wrapper hflex-center-start gap-16"
+					:href="'mailto:' + email">
 					<div
 						class="icon-background vflex-center-center padding-16">
 						<IconBase>
@@ -31,15 +36,19 @@ import Phone from '~/components/icon/Phone.vue';
 						</IconBase>
 					</div>
 					<div class="vflex gap-4">
-						<span class="type-body-14">E-Mail</span>
+						<span class="type-body-14 text-muted on-dark">
+							E-Mail
+						</span>
 						<span
 							class="type-heading-16 text-highlight on-dark">
-							info@craftedmedia.de
+							{{ email }}
 						</span>
 					</div>
-				</div>
+				</a>
 
-				<div class="contact-wrapper hflex-center-start gap-16">
+				<a
+					class="contact-wrapper hflex-center-start gap-16"
+					:href="'tel:' + phone">
 					<div
 						class="icon-background vflex-center-center padding-16">
 						<IconBase>
@@ -47,13 +56,15 @@ import Phone from '~/components/icon/Phone.vue';
 						</IconBase>
 					</div>
 					<div class="vflex gap-4">
-						<span class="type-body-14">Telefon</span>
+						<span class="type-body-14 text-muted on-dark">
+							Telefon
+						</span>
 						<span
 							class="type-heading-16 text-highlight on-dark">
-							+49 123 456 78
+							{{ phone }}
 						</span>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 
@@ -64,6 +75,7 @@ import Phone from '~/components/icon/Phone.vue';
 <style scoped>
 .cta-wrapper {
 	position: relative;
+	overflow: clip;
 }
 
 .cta-content-wrapper {
@@ -82,6 +94,17 @@ import Phone from '~/components/icon/Phone.vue';
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	background: rgba(255, 255, 255, 0.05);
 	padding: 1.5rem;
+	transition:
+		background 0.3s,
+		border-color 0.3s;
+}
+
+/* Hover nur auf Geräten, die wirklich hover können */
+@media (hover: hover) and (pointer: fine) {
+	.contact-wrapper:hover {
+		background: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.2);
+	}
 }
 
 .icon-background {
