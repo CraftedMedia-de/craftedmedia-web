@@ -9,6 +9,7 @@ import CTA from '~/components/section/CTA.vue';
 import FooterGlobal from '~/components/section/FooterGlobal.vue';
 import CustomerFeedback from '~/components/section/CustomerFeedback.vue';
 import ImageGrid from '~/components/section/ImageGrid.vue';
+import MoreInformation from '~/components/section/MoreInformation.vue';
 </script>
 
 <template>
@@ -47,6 +48,10 @@ import ImageGrid from '~/components/section/ImageGrid.vue';
 
 	<section class="breakout">
 		<CTA />
+	</section>
+
+	<section class="breakout">
+		<MoreInformation />
 	</section>
 
 	<section class="breakout">
