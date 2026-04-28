@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Accordion from '~/components/Accordion.vue';
-import LinkedIn from '~/components/icon/LinkedIn.vue';
 const email = 'hallo@craftedmedia.de';
 
 const faq: { question: string; answer: string; id?: number }[] = [
