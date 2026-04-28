@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper } from 'swiper/vue';
 import { Autoplay } from 'swiper/modules';
 import { ref } from 'vue';
 
