@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SwiperSlider from '~/components/section/SwiperSlider.vue';
+import SwiperSlider from '~/components/SwiperSlider.vue';
 
 const props = defineProps<{
 	heading: string;
