@@ -12,6 +12,7 @@ import ImageGrid from '~/components/section/ImageGrid.vue';
 import MoreInformation from '~/components/section/MoreInformation.vue';
 import SliderSection from '~/components/section/SliderSection.vue';
 import { SwiperSlide } from 'swiper/vue';
+import test_cs_video from '~/assets/videos/test_cs_video.mp4';
 </script>
 
 <template>
@@ -88,6 +89,69 @@ import { SwiperSlide } from 'swiper/vue';
 				paragraph="Neues Design, neue Struktur – und ein sauberer Umzug eurer bestehenden Inhalte, damit nichts Wichtiges verloren geht.">
 				<IconNotebookPen />
 			</Card>
+		</SwiperSlide>
+	</SliderSection>
+
+	<SliderSection
+		heading="Unsere Kunden schätzen die Zusammenarbeit mit uns">
+		<SwiperSlide>
+			<Testimonial
+				variant="video"
+				:videoUrl="test_cs_video"
+				customer="Anja Quast"
+				customerPosition="Jugend Berufs Agentur"
+				customerImage="images/test.png" />
+		</SwiperSlide>
+		<SwiperSlide>
+			<Testimonial
+				variant="text"
+				heading="Super Zusammenarbeit"
+				paragraph="Vielen Dank an das Team von CraftedMedia für die kreative Gestaltung unseres Logos. Sie waren offen für unsere Ideen und Anregungen und arbeiteten stets daran, sicherzustellen, dass das endgültige Design unseren Erwartungen entsprach. Wir können CraftedMedia ausdrücklich weiterempfehlen."
+				customer="Anja Quast"
+				customerPosition="Jugend Berufs Agentur"
+				customerImage="images/test.png" />
+		</SwiperSlide>
+		<SwiperSlide>
+			<Testimonial
+				variant="video"
+				:videoUrl="test_cs_video"
+				customer="Anja Quast"
+				customerPosition="Jugend Berufs Agentur"
+				customerImage="images/test.png" />
+		</SwiperSlide>
+		<SwiperSlide>
+			<Testimonial
+				variant="text"
+				heading="Super Zusammenarbeit"
+				paragraph="Vielen Dank an das Team von CraftedMedia für die kreative Gestaltung unseres Logos. Sie waren offen für unsere Ideen und Anregungen und arbeiteten stets daran, sicherzustellen, dass das endgültige Design unseren Erwartungen entsprach. Wir können CraftedMedia ausdrücklich weiterempfehlen."
+				customer="Anja Quast"
+				customerPosition="Jugend Berufs Agentur"
+				customerImage="images/test.png" />
+		</SwiperSlide>
+		<SwiperSlide>
+			<Testimonial
+				variant="video"
+				:videoUrl="test_cs_video"
+				customer="Anja Quast"
+				customerPosition="Jugend Berufs Agentur"
+				customerImage="images/test.png" />
+		</SwiperSlide>
+		<SwiperSlide>
+			<Testimonial
+				variant="text"
+				heading="Super Zusammenarbeit"
+				paragraph="Vielen Dank an das Team von CraftedMedia für die kreative Gestaltung unseres Logos. Sie waren offen für unsere Ideen und Anregungen und arbeiteten stets daran, sicherzustellen, dass das endgültige Design unseren Erwartungen entsprach. Wir können CraftedMedia ausdrücklich weiterempfehlen."
+				customer="Anja Quast"
+				customerPosition="Jugend Berufs Agentur"
+				customerImage="images/test.png" />
+		</SwiperSlide>
+		<SwiperSlide>
+			<Testimonial
+				variant="video"
+				:videoUrl="test_cs_video"
+				customer="Anja Quast"
+				customerPosition="Jugend Berufs Agentur"
+				customerImage="images/test.png" />
 		</SwiperSlide>
 	</SliderSection>
 
