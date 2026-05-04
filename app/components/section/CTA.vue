@@ -8,8 +8,7 @@ const phone = '+49 4171 6689551';
 </script>
 
 <template>
-	<div
-		class="cta-wrapper background-dark padding-v-128 padding-h-32 border-radius-32">
+	<div class="cta-wrapper background-dark padding-v-128 padding-h-32">
 		<div class="cta-content-wrapper vflex-center-center gap-48">
 			<h2
 				class="type-display-64 text-highlight on-dark text-align-center">
@@ -84,6 +83,7 @@ const phone = '+49 4171 6689551';
 .cta-wrapper {
 	position: relative;
 	overflow: clip;
+	border-radius: 2rem;
 }
 
 .cta-content-wrapper {
