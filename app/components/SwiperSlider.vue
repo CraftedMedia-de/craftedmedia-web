@@ -154,7 +154,7 @@ const goToSlide = (index: number) => {
 	</section>
 </template>
 
-<style scoped>
+<style>
 .slider-wrapper {
 	padding-block: 2rem;
 	overflow: clip;
@@ -211,6 +211,24 @@ const goToSlide = (index: number) => {
 
 .slider-swiper {
 	overflow: visible;
+}
+
+/* Swiper-Wrapper streckt Slides auf gleiche Höhe */
+.slider-swiper .swiper-wrapper {
+	align-items: stretch;
+}
+
+/* Slides füllen die Wrapper-Höhe */
+.slider-swiper .swiper-slide {
+	height: auto;
+	display: flex;
+	align-items: stretch;
+}
+
+/* Direct Children der Slides füllen die Slide-Höhe */
+.slider-swiper .swiper-slide > * {
+	flex: 1;
+	width: 100%;
 }
 
 .slider-pagination {
