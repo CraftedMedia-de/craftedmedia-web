@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Accordion from '~/components/Accordion.vue';
-const email = 'hallo@craftedmedia.de';
+
+import { contact } from '~/data/contact';
 
 const faq: { question: string; answer: string; id?: number }[] = [
 	{
@@ -111,9 +112,11 @@ const faq: { question: string; answer: string; id?: number }[] = [
 			<div class="padding-v-32 text-underlined">
 				<a
 					class="type-heading-20 text-highlight"
-					:href="'mailto:' + email">
+					:href="contact.emailHref">
 					Du hast noch fragen? Schreib uns gerne unter
-					<strong class="text-underline">{{ email }}</strong>
+					<strong class="text-underline">
+						{{ contact.emailLabel }}
+					</strong>
 				</a>
 			</div>
 		</div>
