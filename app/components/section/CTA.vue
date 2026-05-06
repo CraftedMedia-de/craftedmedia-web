@@ -3,8 +3,7 @@ import Mail from '~/components/icon/Mail.vue';
 import Phone from '~/components/icon/Phone.vue';
 import ArrowRight from '~/components/icon/ArrowRight.vue';
 
-const email = 'info@craftedmedia.de';
-const phone = '+49 4171 6689551';
+import { contact } from '~/data/contact';
 </script>
 
 <template>
@@ -35,7 +34,7 @@ const phone = '+49 4171 6689551';
 			<div class="contact-grid gap-24">
 				<a
 					class="contact-wrapper hflex-center-start gap-16"
-					:href="'mailto:' + email">
+					:href="contact.emailHref">
 					<div
 						class="icon-background vflex-center-center padding-16">
 						<IconBase>
@@ -48,14 +47,14 @@ const phone = '+49 4171 6689551';
 						</span>
 						<span
 							class="type-heading-16 text-highlight on-dark">
-							{{ email }}
+							{{ contact.emailLabel }}
 						</span>
 					</div>
 				</a>
 
 				<a
 					class="contact-wrapper hflex-center-start gap-16"
-					:href="'tel:' + phone">
+					:href="contact.phoneHref">
 					<div
 						class="icon-background vflex-center-center padding-16">
 						<IconBase>
@@ -68,7 +67,7 @@ const phone = '+49 4171 6689551';
 						</span>
 						<span
 							class="type-heading-16 text-highlight on-dark">
-							{{ phone }}
+							{{ contact.phoneLabel }}
 						</span>
 					</div>
 				</a>
