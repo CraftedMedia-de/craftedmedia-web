@@ -26,7 +26,8 @@ export interface ContactData {
 	notes?: string[];
 }
 
-const phoneToHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, '')}`;
+const phoneToHref = (phone: string) =>
+	`tel:${phone.replace(/[^\d+]/g, '')}`;
 
 export const contact: ContactData = {
 	companyName: 'CraftedMedia',
