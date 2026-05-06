@@ -55,14 +55,20 @@ onBeforeUnmount(() => {
 
 				<NuxtLink
 					class="nav-link type-heading-16"
-					to="/Designsystem">
+					to="/designsystem">
 					Design System
 				</NuxtLink>
 
 				<NuxtLink
 					class="nav-link type-heading-16"
-					to="/Projekte">
+					to="/projekte">
 					Projekte
+				</NuxtLink>
+
+				<NuxtLink
+					class="nav-link type-heading-16"
+					to="/webdesign">
+					Webdesign
 				</NuxtLink>
 			</li>
 
