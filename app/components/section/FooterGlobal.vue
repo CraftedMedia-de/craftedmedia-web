@@ -4,9 +4,6 @@ import Instagram from '~/components/icon/Instagram.vue';
 import LinkedIn from '~/components/icon/LinkedIn.vue';
 
 import { contact } from '~/data/contact';
-
-const email = 'info@craftedmedia.de';
-const phone = '+49 4171 6689551';
 </script>
 
 <template>
