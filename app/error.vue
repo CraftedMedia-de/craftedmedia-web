@@ -159,8 +159,4 @@ const goBack = () => {
 	</main>
 </template>
 
-<style scoped>
-.test {
-	align-self: center;
-}
-</style>
+<style scoped></style>
