@@ -38,14 +38,14 @@ const props = withDefaults(defineProps<Props>(), {
 		class="card variant-2 shadow-s"
 		v-else-if="props.variant === 'variant-2'">
 		<IconBase class="icon-32">
-			<slot />
+			<slot name="icon" />
 		</IconBase>
 		<div class="vflex-start-start gap-16">
 			<h3 class="type-heading-32 no-dot">{{ props.heading }}</h3>
 			<p class="type-body-16">{{ props.paragraph }}</p>
 		</div>
 
-		<div>Button</div>
+		<slot name="footer" />
 	</div>
 </template>
 
