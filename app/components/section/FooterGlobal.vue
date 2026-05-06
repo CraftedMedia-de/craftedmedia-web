@@ -3,6 +3,8 @@ import CraftedMediaLogo from '~/components/icon/CraftedMediaLogo.vue';
 import Instagram from '~/components/icon/Instagram.vue';
 import LinkedIn from '~/components/icon/LinkedIn.vue';
 
+import { contact } from '~/data/contact';
+
 const email = 'info@craftedmedia.de';
 const phone = '+49 4171 6689551';
 </script>
@@ -35,10 +37,14 @@ const phone = '+49 4171 6689551';
 							<span>21423 Winsen (Luhe)</span>
 						</li>
 						<li class="margin-top-24 text-highlight on-dark">
-							<a :href="'mailto:' + email">{{ email }}</a>
+							<a :href="contact.emailHref">
+								{{ contact.emailLabel }}
+							</a>
 						</li>
 						<li class="text-highlight on-dark">
-							<a :href="'tel:' + phone">{{ phone }}</a>
+							<a :href="contact.phoneHref">
+								{{ contact.phoneLabel }}
+							</a>
 						</li>
 					</ul>
 				</div>
