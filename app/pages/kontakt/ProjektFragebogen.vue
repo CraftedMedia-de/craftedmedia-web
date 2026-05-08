@@ -34,7 +34,7 @@ const form = reactive({
 	message: '',
 });
 
-const { submit } = useNetlifyForm({ formName: 'projektfragebogen' })
+const { submit, isSubmitting, submitSuccess, submitError } = useNetlifyForm({ formName: 'projektfragebogen' })
 
 type FieldKey = keyof typeof form;
 type InputFieldKey = Exclude<FieldKey, 'services'>;
@@ -315,9 +315,17 @@ const servicesOptions = [
 					v-else
 					variant="solid-brand"
 					type="submit"
+					:disabled="isSubmitting"
+					@click="submitForm"
 				>
-					Absenden
+					{{ isSubmitting ? 'Wird gesendet...' : 'Absenden' }}
 				</Button>
+				<p v-if="submitSuccess" class="submit-state submit-state--success">
+					Danke, dein Formular wurde erfolgreich gesendet.
+				</p>
+				<p v-if="submitError" class="submit-state submit-state--error">
+					{{ submitError }}
+				</p>
 			</div>
 		</div>
 		</form>
@@ -353,5 +361,18 @@ const servicesOptions = [
 	display: flex;
 	flex-direction: column;
 	gap: 4rem;
+}
+
+.submit-state {
+	margin-top: 1rem;
+	font-size: 0.95rem;
+}
+
+.submit-state--success {
+	color: #22c55e;
+}
+
+.submit-state--error {
+	color: #ef4444;
 }
 </style>
