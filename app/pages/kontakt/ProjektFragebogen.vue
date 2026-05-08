@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactive, ref, computed } from 'vue';
+import { useNetlifyForm } from '~/composables/useNetlifyForm'
 
 const steps = ['contact', 'budgetAndTime', 'scope'] as const;
 type StepKey = (typeof steps)[number];
@@ -32,6 +33,8 @@ const form = reactive({
 	services: [] as string[],
 	message: '',
 });
+
+const { submit, isSubmitting, submitSuccess, submitError, buildHiddenFields } = useNetlifyForm({ formName: 'projektfragebogen' })
 
 type FieldKey = keyof typeof form;
 type InputFieldKey = Exclude<FieldKey, 'services'>;
@@ -135,10 +138,11 @@ function prevStep() {
 	if (!isFirstStep.value) currentStepIndex.value -= 1;
 }
 
-function submitForm() {
+async function submitForm() {
 	if (!validateCurrentStep()) return;
-	console.log('Finale Form-Daten:', { ...form });
-	// hier später API call
+
+	// Use the composable's submit method (handles everything: urlencoding, Netlify POST, etc.)
+	await submit(form);
 }
 
 const budgetOptions = [
@@ -169,6 +173,17 @@ const servicesOptions = [
 
 <template>
 	<section class="questionar-body full-width">
+		<!-- Netlify form wrapper: Netlify detects static <form> with `netlify` attribute at build time -->
+		<form
+			name="projektfragebogen"
+			data-netlify="true"
+			data-netlify-honeypot="bot-field"
+			@submit.prevent="submitForm"
+			class="questionar-form">
+			<!-- Hidden inputs generated from the composable so this pattern is reusable -->
+			<template v-for="field in buildHiddenFields(form)" :key="field.name">
+				<input type="hidden" :name="field.name" :value="field.value" />
+			</template>
 		<div class="progress-bar-track">
 			<div
 				class="progress-bar"
@@ -293,11 +308,13 @@ const servicesOptions = [
 				<Button
 					v-else
 					variant="solid-brand"
-					@click="submitForm">
+					type="submit"
+				>
 					Absenden
 				</Button>
 			</div>
 		</div>
+		</form>
 	</section>
 </template>
 
