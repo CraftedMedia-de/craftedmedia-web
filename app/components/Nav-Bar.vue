@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
 			</li>
 
 			<li class="nav-group nav-group-end hflex gap-8">
-				<NuxtLink to="/Projekte">
+				<NuxtLink to="/kontakt/projektfragebogen">
 					<Button variant="solid-brand">
 						<div>Projekt anfragen</div>
 						<IconBase class="icon-24">
