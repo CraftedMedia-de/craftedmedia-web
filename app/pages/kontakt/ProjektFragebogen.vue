@@ -34,7 +34,7 @@ const form = reactive({
 	message: '',
 });
 
-const { submit, isSubmitting, submitSuccess, submitError, buildHiddenFields } = useNetlifyForm({ formName: 'projektfragebogen' })
+const { submit } = useNetlifyForm({ formName: 'projektfragebogen' })
 
 type FieldKey = keyof typeof form;
 type InputFieldKey = Exclude<FieldKey, 'services'>;
@@ -180,10 +180,16 @@ const servicesOptions = [
 			data-netlify-honeypot="bot-field"
 			@submit.prevent="submitForm"
 			class="questionar-form">
-			<!-- Hidden inputs generated from the composable so this pattern is reusable -->
-			<template v-for="field in buildHiddenFields(form)" :key="field.name">
-				<input type="hidden" :name="field.name" :value="field.value" />
-			</template>
+			<!-- Hidden inputs for Netlify form detection/capture -->
+			<input type="hidden" name="form-name" value="projektfragebogen" />
+			<input type="hidden" name="bot-field" value="" />
+			<input type="hidden" name="name" :value="form.name" />
+			<input type="hidden" name="email" :value="form.email" />
+			<input type="hidden" name="phone" :value="form.phone" />
+			<input type="hidden" name="budget" :value="form.budget" />
+			<input type="hidden" name="deadline" :value="form.deadline" />
+			<input type="hidden" name="services" :value="form.services.join(', ')" />
+			<input type="hidden" name="message" :value="form.message" />
 		<div class="progress-bar-track">
 			<div
 				class="progress-bar"

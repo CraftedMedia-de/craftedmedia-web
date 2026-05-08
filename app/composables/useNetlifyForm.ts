@@ -1,4 +1,4 @@
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 export type NetlifyFormField = { name: string; value: string }
 
@@ -53,20 +53,18 @@ export function useNetlifyForm(options?: { endpoint?: string; formName?: string 
     }
   }
 
-  function buildHiddenFields(data: Record<string, any>) {
-    return computed<NetlifyFormField[]>(() => {
-      const fields: NetlifyFormField[] = []
-      fields.push({ name: 'form-name', value: formName })
-      fields.push({ name: 'bot-field', value: '' })
+  function buildHiddenFields(data: Record<string, any>): NetlifyFormField[] {
+    const fields: NetlifyFormField[] = []
+    fields.push({ name: 'form-name', value: formName })
+    fields.push({ name: 'bot-field', value: '' })
 
-      Object.entries(data).forEach(([k, v]) => {
-        if (v === undefined || v === null) return
-        if (Array.isArray(v)) fields.push({ name: k, value: v.join(', ') })
-        else fields.push({ name: k, value: String(v) })
-      })
-
-      return fields
+    Object.entries(data).forEach(([k, v]) => {
+      if (v === undefined || v === null) return
+      if (Array.isArray(v)) fields.push({ name: k, value: v.join(', ') })
+      else fields.push({ name: k, value: String(v) })
     })
+
+    return fields
   }
 
   return {
